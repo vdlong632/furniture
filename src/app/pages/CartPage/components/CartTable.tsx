@@ -23,7 +23,6 @@ const COLUMNS = [
   { id: 'delete', label: '', minWidth: '50px', align: 'left' }
 ];
 
-
 export const CartTable = () => {
   return (
     <Stack flex={1}>

@@ -26,7 +26,7 @@ export const Inspiration = () => {
   return (
     <Stack flex={1} p={'30px 0px 30px 75px'} bgcolor={'rgba(252, 248, 243, 1)'}>
       <Grid container spacing={4}>
-        <Grid item md={4} sm={6} xs={12} sx={{alignContent: 'center'}}>
+        <Grid item md={4} sm={6} xs={12} sx={{ alignContent: 'center' }}>
           <Stack>
             <Typography
               sx={{
@@ -134,11 +134,7 @@ export const Inspiration = () => {
             showDots={true}>
             {images.map((src, i) => (
               <Box key={i} sx={{ px: 1 }}>
-                <img
-                  src={src}
-                  alt={`slide-${i}`}
-                  style={{ width: '100%', height: '100%'}}
-                />
+                <img src={src} alt={`slide-${i}`} style={{ width: '100%', height: '100%' }} />
               </Box>
             ))}
           </Carousel>

@@ -23,9 +23,7 @@ export const Footer = () => {
             <StackStyled>
               {links.map((item) => (
                 <IStyled key={item}>
-                  <Link to={lowerCase(item)}>
-                    {item}
-                  </Link>
+                  <Link to={lowerCase(item)}>{item}</Link>
                 </IStyled>
               ))}
             </StackStyled>

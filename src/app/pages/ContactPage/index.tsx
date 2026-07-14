@@ -14,7 +14,9 @@ export const ContactPage = () => {
         <PageHeader title={'Contact'} route={[{ label: 'Contact', path: '/contact' }]} />
         <Stack flex={1} m={'20px 100px'}>
           <Stack m={'40px 0'} display={'flex'} alignItems={'center'}>
-            <Typography sx={{ fontSize: 'clamp(25px, 3.5vw, 36px)', fontWeight: 600 }}>Get In Touch With Us</Typography>
+            <Typography sx={{ fontSize: 'clamp(25px, 3.5vw, 36px)', fontWeight: 600 }}>
+              Get In Touch With Us
+            </Typography>
             <Typography
               sx={{
                 fontSize: '16px',
@@ -28,13 +30,13 @@ export const ContactPage = () => {
           </Stack>
           <Stack flex={1} m={'0px 10vw'}>
             <Grid container spacing={'10px'}>
-            <Grid item xs={12} sm={10} md={6}>
-              <ContactInfo />
+              <Grid item xs={12} sm={10} md={6}>
+                <ContactInfo />
+              </Grid>
+              <Grid item xs={12} sm={10} md={6}>
+                <ContactForm handleSubmit={handleSubmit} />
+              </Grid>
             </Grid>
-            <Grid item xs={12} sm={10} md={6}>
-              <ContactForm handleSubmit={handleSubmit} />
-            </Grid>
-          </Grid>
           </Stack>
         </Stack>
         <Policy />

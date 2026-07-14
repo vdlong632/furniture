@@ -8,9 +8,9 @@ export const BlogPage = () => {
     <Stack flex={1}>
       <PageHeader title={'Blog'} route={[{ label: 'Blog', path: '/blog' }]} />
       <Stack>
-        <BlogList limit={3}/>
+        <BlogList limit={3} />
       </Stack>
-      <Policy/>
+      <Policy />
     </Stack>
   );
 };

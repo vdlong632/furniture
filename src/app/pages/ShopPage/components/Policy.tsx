@@ -40,7 +40,7 @@ export const Policy = () => {
           <DesStyled>Dedicated support</DesStyled>
         </Stack>
       </StackStyled> */}
-      <Grid container spacing={{md: '5px', sm: '20px', xs: '15px'}}>
+      <Grid container spacing={{ md: '5px', sm: '20px', xs: '15px' }}>
         <Grid item xs={6} sm={6} md={3.3}>
           <StackStyled>
             <Quality width={'50px'} height={'50px'} />

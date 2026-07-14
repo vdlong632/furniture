@@ -48,8 +48,8 @@ export const ShopPage = () => {
           {/* <ShortInput /> */}
         </Stack>
       </FilterBar>
-      <ProductSection limit={32} showMore={false}/>
-      <Policy/>
+      <ProductSection limit={32} showMore={false} />
+      <Policy />
     </Stack>
   );
 };

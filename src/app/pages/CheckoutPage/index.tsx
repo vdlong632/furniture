@@ -15,7 +15,7 @@ export const CheckoutPage = () => {
         <Stack flexDirection={'row'} m={'30px 75px'} gap={'25px'}>
           <Billing />
           <Stack width={'100%'}>
-            <Order handleSubmit={handleSubmit}/>
+            <Order handleSubmit={handleSubmit} />
           </Stack>
         </Stack>
         {/* <Grid container m={'30px 75px'} spacing={'25px'}>

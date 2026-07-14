@@ -56,15 +56,15 @@ const BoxStyled = styled(Box)(() => ({
 
 const ImgStyled = styled('img')(() => ({
   width: '100%',
-  borderRadius: '10px',
+  borderRadius: '10px'
 }));
 
 const TitleStyled = styled(Typography)(() => ({
-    fontSize: '24px',
-    fontWeight: 600,
-    lineHeight: '100%',
-    letterSpacing: 0,
-    textAlign: 'center',
-    margin: '30px 0',
-    color: 'rgba(51, 51, 51, 1)'
-}))
+  fontSize: '24px',
+  fontWeight: 600,
+  lineHeight: '100%',
+  letterSpacing: 0,
+  textAlign: 'center',
+  margin: '30px 0',
+  color: 'rgba(51, 51, 51, 1)'
+}));

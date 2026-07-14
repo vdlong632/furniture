@@ -33,6 +33,5 @@ export const ROUTE_MENU: MenuItem[] = [
     label: 'Blog',
     link: '/blog',
     activeUrls: ['/blog']
-  },
+  }
 ];
-
