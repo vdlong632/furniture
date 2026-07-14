@@ -70,7 +70,7 @@ const palette: ThemeOptions['palette'] = {
 
 // ─── Typography ─────────────────────────────────────────────────────────────
 const typography: ThemeOptions['typography'] = {
-  fontFamily: '"Kumbh Sans", sans-serif',
+  fontFamily: '"Poppins", sans-serif',
   fontFamilySecondary: '"IBM Plex Sans", sans-serif',
   h1: {
     fontSize: '2rem',

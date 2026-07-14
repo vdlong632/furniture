@@ -83,7 +83,7 @@ const TextareaStyled = styled(OutlinedInput)(() => ({
     padding: '4px',
     '&::placeholder': {
       color: '#16161666',
-      fontFamily: '"Kumbh Sans"',
+      fontFamily: '"Kumbh Sans", sans-serif',
       fontSize: 16,
       fontStyle: 'normal',
       fontWeight: 400,

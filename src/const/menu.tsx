@@ -2,47 +2,37 @@ import { ReactNode } from 'react';
 import { DashboardIcon, ProceduresIcon, ProductIcon, SettingIcon, UserIcon } from 'assets/index';
 
 export type MenuItem = {
-  label: string;
+  label?: string;
   link: string;
-  icon: ReactNode;
+  icon?: ReactNode;
   activeUrls?: string[];
 };
 
-export const ADMIN_MENU: MenuItem[] = [
+export const ROUTE_MENU: MenuItem[] = [
   {
-    label: 'Dashboard',
-    link: '/admin/dashboard',
-    icon: <DashboardIcon />,
-    activeUrls: ['/admin/dashboard']
+    label: 'Home',
+    link: '/',
+    activeUrls: ['/']
   },
   {
-    label: 'Users',
-    link: '/admin/users',
-    icon: <UserIcon />,
-    activeUrls: ['/admin/users']
+    label: 'Shop',
+    link: '/shop',
+    activeUrls: ['/shop']
   },
   {
-    label: 'Clients',
-    link: '/admin/clients',
-    icon: <UserIcon />,
-    activeUrls: ['/admin/clients']
+    label: 'About',
+    link: '/about',
+    activeUrls: ['/about']
   },
   {
-    label: 'Products',
-    link: '/admin/products',
-    icon: <ProductIcon />,
-    activeUrls: ['/admin/products']
+    label: 'Contact',
+    link: '/contact',
+    activeUrls: ['/contact']
   },
   {
-    label: 'Procedures',
-    link: '/admin/procedures',
-    icon: <ProceduresIcon />,
-    activeUrls: ['/admin/procedures']
+    label: 'Blog',
+    link: '/blog',
+    activeUrls: ['/blog']
   },
-  {
-    label: 'Settings',
-    link: '/admin/settings',
-    icon: <SettingIcon />,
-    activeUrls: ['/admin/settings']
-  }
 ];
+

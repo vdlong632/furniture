@@ -50,7 +50,7 @@ export const InputText: FC<InputTextProps> = ({
       {title && (
         <FormLabel focused={false}>
           <Typography
-            sx={{ fontFamily: '"IBM Plex Sans", sans-serif' }}
+            sx={{ fontFamily: '"Kumbh Sans", sans-serif' }}
             lineHeight={isAuthScreen ? '16px' : '20px'}
             fontSize={isAuthScreen ? 14 : 16}
             mb={1.25}
@@ -94,7 +94,7 @@ const InputStyled = styled(OutlinedInput, {
     color: theme.palette.text.primary,
     '&::placeholder': {
       color: '#16161666',
-      fontFamily: '"Kumbh Sans"',
+      fontFamily: '"Kumbh Sans", sans-serif',
       fontSize: isAuthScreen ? 14 : 16,
       fontStyle: 'normal',
       fontWeight: 400,

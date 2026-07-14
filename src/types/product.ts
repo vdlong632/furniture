@@ -77,3 +77,34 @@ export const PROMOTE_OPTIONS = [
   { label: 'Clinic \n Promoted', value: PROMOTED_STATUS.CLINIC_PROMOTED },
   { label: 'Brand \n Promoted', value: PROMOTED_STATUS.BRAND_PROMOTED }
 ];
+
+export const MOCK_PRODUCT = [
+  {
+    id: 1,
+    images: '/public/mockupwall.png',
+    name: 'Asgaard sofa',
+    price: '250000',
+    quantity: 2
+  },
+  {
+    id: 2,
+    images: '/public/mockupwall.png',
+    name: 'Asgaard sofa',
+    price: '250000',
+    quantity: 2
+  },
+  {
+    id: 3,
+    images: '/public/mockupwall.png',
+    name: 'Asgaard sofa',
+    price: '250000',
+    quantity: 2
+  },
+  {
+    id: 4,
+    image: '/public/mockupwall.png',
+    names: 'Asgaard sofa',
+    price: '250000',
+    quantity: 2
+  }
+];

@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 export const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 export const phoneRegex = /^\d{3}[-\s]?\d{3}[-\s]?\d{4}$/;
+export const zipRegex = /^\d{6}$/;
 
 export const RequiredField = 'This field is required';
 
