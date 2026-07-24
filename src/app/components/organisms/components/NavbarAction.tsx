@@ -239,7 +239,7 @@ const CartList = styled(Stack)(() => ({
   display: 'flex',
   gap: '25px',
   overflow: 'hidden',
-  overflowY: 'scroll',
+  overflowY: 'scroll'
 
   // backgroundColor: '#ccc',
   // gap: '10px',

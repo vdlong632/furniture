@@ -12,7 +12,7 @@ export const ProductDetail = ({ product }: Props) => {
   const [selectedSize, setSelectedSize] = useState('');
   const [selectedColor, setSelectedColor] = useState('');
   const [count, setCount] = useState(1);
-  const { addToCart } = useCart()
+  const { addToCart } = useCart();
 
   const increase = () => {
     setCount(count + 1);
@@ -20,12 +20,12 @@ export const ProductDetail = ({ product }: Props) => {
   const decrease = () => {
     if (count > 1) {
       setCount(count - 1);
-    } 
+    }
   };
 
   const handleAddToCart = () => {
-    addToCart(product, count)
-  }
+    addToCart(product, count);
+  };
   return (
     <Stack flex={1} p={'30px 75px 0 75px'} flexDirection={{ md: 'row', sm: 'column' }} gap={'60px'}>
       <Stack flexDirection={'row'} gap={'20px'}>
@@ -170,7 +170,7 @@ const ImgStyled = styled('img')(() => ({
   cursor: 'pointer'
 }));
 
-const MainImg = styled('img')(({theme}) => ({
+const MainImg = styled('img')(({ theme }) => ({
   width: '100%',
   height: '100%',
   [theme.breakpoints.down('md')]: {

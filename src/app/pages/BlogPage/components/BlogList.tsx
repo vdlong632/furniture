@@ -7,9 +7,9 @@ type Props = {
   limit: number;
   blogs: Blog[];
 };
-export const BlogList = ({ limit, blogs}: Props) => {
+export const BlogList = ({ limit, blogs }: Props) => {
   const slug = useParams<{ slug: string }>();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const displayedBlog = limit ? blogs.slice(0, limit) : blogs;
   return (
@@ -45,7 +45,12 @@ export const BlogList = ({ limit, blogs}: Props) => {
             }}>
             {blog.content}
           </Typography>
-          <ButtonStyled onClick={() => {navigate(`/blog/slug/${blog.slug}`)}}>Read more</ButtonStyled>
+          <ButtonStyled
+            onClick={() => {
+              navigate(`/blog/slug/${blog.slug}`);
+            }}>
+            Read more
+          </ButtonStyled>
         </Stack>
       ))}
     </Stack>

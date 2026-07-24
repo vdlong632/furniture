@@ -53,7 +53,7 @@ const WrapperNavbar = styled(Stack)(() => ({
   width: '100%',
   height: '100px',
   backgroundColor: 'rgba(255, 255, 255, 1)',
-  position: 'relative',
+  position: 'relative'
 }));
 
 const NavbarContent = styled(Stack)(() => ({
