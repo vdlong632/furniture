@@ -1,12 +1,8 @@
 import { useGetProduct } from './useGetProduct';
 
 export const useProductSection = () => {
-  const { products, total, page, setPage, totalPages } = useGetProduct();
+  const { products } = useGetProduct();
   return {
-    products,
-    total,
-    page,
-    setPage,
-    totalPages
+    products
   };
 };

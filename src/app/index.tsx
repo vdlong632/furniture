@@ -9,6 +9,7 @@ import { CheckoutPage } from './pages/CheckoutPage';
 import { ContactPage } from './pages/ContactPage';
 import { BlogPage } from './pages/BlogPage';
 import { AboutPage } from './pages/AboutPage';
+import { BlogDetailPage } from './pages/BlogDetailPage';
 
 export default function App() {
   return (
@@ -21,13 +22,14 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/shop" element={<ShopPage />} />
-              <Route path="/product" element={<SingleProductPage />} />
+              <Route path="/products/slug/:slug" element={<SingleProductPage />} />
               <Route path="/comparison" element={<ComparisonPage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/slug/:slug" element={<BlogDetailPage />} />
             </Routes>
           </NavbarLayout>
         }

@@ -1,6 +1,5 @@
 import { Box, Grid, Stack, styled, Typography } from '@mui/material';
 
-const Room = [];
 export const RoomType = () => {
   return (
     <Stack flex={1} margin={'0 100px'}>

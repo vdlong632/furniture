@@ -1,39 +1,45 @@
 import { Button, Stack, styled, Typography } from '@mui/material';
+import { useCart } from 'contexts/cart';
 import { useNavigate } from 'react-router-dom';
+import { useTotalProductCart } from 'utils/totalProduct';
 
 export const CartTotal = () => {
+  const total = useTotalProductCart();
   const navigate = useNavigate();
   return (
-    <Stack flex={1} bgcolor={'rgba(249, 241, 231, 1)'} p={'10px 30px 70px 30px'}>
-      <Typography
-        sx={{ fontSize: '32px', fontWeight: 600, textAlign: 'center', marginBottom: '15px' }}>
-        Cart Total
-      </Typography>
-      <Stack gap={'30px'}>
-        <Stack flexDirection={'row'} gap={'45px'} alignItems={'center'}>
-          <TextStyled sx={{ fontSize: '16px', fontWeight: 500 }}>Subtotal</TextStyled>
-          <Typography
-            sx={{
-              minWidth: '150px',
-              fontSize: '14px',
-              fontWeight: 400,
-              color: 'rgba(159, 159, 159, 1)'
+    <Stack flex={1}>
+      <Stack bgcolor={'rgba(249, 241, 231, 1)'} p={'10px 30px 70px 30px'}>
+        <Typography
+          sx={{ fontSize: '32px', fontWeight: 600, textAlign: 'center', marginBottom: '15px' }}>
+          Cart Total
+        </Typography>
+        <Stack gap={'30px'}>
+          <Stack flexDirection={'row'} gap={'45px'} alignItems={'center'}>
+            <TextStyled sx={{ fontSize: '16px', fontWeight: 500 }}>Subtotal</TextStyled>
+            <Typography
+              sx={{
+                minWidth: '150px',
+                fontSize: '14px',
+                fontWeight: 400,
+                color: 'rgba(159, 159, 159, 1)'
+              }}>
+              Rs. {total.toLocaleString('de-DE')}
+            </Typography>
+          </Stack>
+          <Stack flexDirection={'row'} gap={'45px'} alignItems={'center'}>
+            <TextStyled>Total</TextStyled>
+            <TextStyled
+              sx={{ minWidth: '150px', fontSize: '20px', color: 'rgba(184, 142, 47, 1)' }}>
+              Rs. {total.toLocaleString('de-DE')}
+            </TextStyled>
+          </Stack>
+          <ButtonStyled
+            onClick={() => {
+              navigate('/checkout');
             }}>
-            Rs. 100,000.000
-          </Typography>
+            Checkout
+          </ButtonStyled>
         </Stack>
-        <Stack flexDirection={'row'} gap={'45px'} alignItems={'center'}>
-          <TextStyled>Total</TextStyled>
-          <TextStyled sx={{ minWidth: '150px', fontSize: '20px', color: 'rgba(184, 142, 47, 1)' }}>
-            Rs. 100,000.000
-          </TextStyled>
-        </Stack>
-        <ButtonStyled
-          onClick={() => {
-            navigate('/checkout');
-          }}>
-          Checkout
-        </ButtonStyled>
       </Stack>
     </Stack>
   );

@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { ReactNode } from 'react';
 
 export interface ProductColor {
   name: string;
@@ -39,19 +38,33 @@ export interface Product {
   relatedIds: number[];
 }
 
-export interface ListProductParams {
-  page?: number;
-  limit?: number;
+export interface cartItem extends Product {
+  quantity: number;
 }
 
-export interface ListProductResponse {
-  list: Product[];
-  total: number;
-}
+// export interface ListProductParams {
+//   page?: number;
+//   limit?: number;
+// }
 
-export const getProduct = async (params?: ListProductParams): Promise<ListProductResponse> => {
-  const { data } = await axios.get<ListProductResponse>('http://localhost:3001/api/products', {
-    params
-  });
+// export interface ListProductResponse {
+//   list: Product[];
+//   total: number;
+// }
+
+// export const getProduct = async (params?: ListProductParams): Promise<ListProductResponse> => {
+//   const { data } = await axios.get<ListProductResponse>('http://localhost:3001/api/products', {
+//     params
+//   });
+//   return data;
+// };
+
+export const getProduct = async () => {
+  const { data } = await axios.get('http://localhost:3001/api/products');
+  return data;
+};
+
+export const getProductDetail = async (slug: string) => {
+  const { data } = await axios.get(`http://localhost:3001/api/products/slug/${slug}`);
   return data;
 };

@@ -53,7 +53,7 @@ const WrapperNavbar = styled(Stack)(() => ({
   width: '100%',
   height: '100px',
   backgroundColor: 'rgba(255, 255, 255, 1)',
-  position: 'relative'
+  position: 'relative',
 }));
 
 const NavbarContent = styled(Stack)(() => ({
@@ -67,7 +67,7 @@ const NavbarContent = styled(Stack)(() => ({
 
 const MenuToggle = styled(Stack)(() => ({
   display: 'none',
-  position: 'absolute',
+  position: 'sticky',
   top: '100px',
   left: 0,
   right: 0,

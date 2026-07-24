@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
   overflow-x: hidden;
 }
 html::-webkit-scrollbar,

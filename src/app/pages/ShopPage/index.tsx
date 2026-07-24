@@ -1,12 +1,14 @@
-import { Input, MenuItem, Select, Stack, styled, Typography } from '@mui/material';
+import { MenuItem, Select, Stack, styled, Typography } from '@mui/material';
 import { PageHeader } from 'app/components/elements/PageHeader';
 import { FilterIcon, GridIcon, ViewList } from 'assets';
 import { useState } from 'react';
 import { Policy } from './components/Policy';
 import { ProductSection } from '../HomePage/components/ProductSection';
+import { useProductSection } from '../HomePage/hook';
 
 export const ShopPage = () => {
   const [room, setRoom] = useState('default');
+  const { products } = useProductSection();
   return (
     <Stack flex={1}>
       <PageHeader title={'Shop'} route={[{ label: 'Shop', path: '/shop' }]} />
@@ -44,11 +46,13 @@ export const ShopPage = () => {
             <MenuItem value="default">Default</MenuItem>
             <MenuItem value="living">Living</MenuItem>
             <MenuItem value="kitchen">Kitchen</MenuItem>
+            <MenuItem value="bedroom">Bedroom</MenuItem>
+            <MenuItem value="dining">Dining</MenuItem>
+            <MenuItem value="outdoor">Outdoor</MenuItem>
           </Select>
-          {/* <ShortInput /> */}
         </Stack>
       </FilterBar>
-      <ProductSection limit={32} showMore={false} />
+      <ProductSection limit={16} showMore={false} filterRoom={room} products={products} />
       <Policy />
     </Stack>
   );
@@ -77,21 +81,6 @@ const StyledInput = styled('input')(() => ({
   fontSize: '20px',
   color: 'rgba(159, 159, 159, 1)',
   textAlign: 'center',
-  border: `1px solid rgba(255, 255, 255, 1)`,
-  outline: 'none',
-  transition: 'border-color 0.2s',
-  '&:focus': {
-    backgroundColor: '#F8F8F8',
-    borderWidth: 1.5
-  }
-}));
-
-const ShortInput = styled('input')(() => ({
-  width: '120px',
-  height: '40px',
-  fontSize: '20px',
-  paddingLeft: '20px',
-  color: 'rgba(159, 159, 159, 1)',
   border: `1px solid rgba(255, 255, 255, 1)`,
   outline: 'none',
   transition: 'border-color 0.2s',

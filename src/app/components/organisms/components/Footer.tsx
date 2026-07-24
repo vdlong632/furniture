@@ -6,7 +6,7 @@ export const Footer = () => {
   const links = ['Home', 'Shop', 'About', 'Contact', 'Blog'];
   const helps = ['Payment Options', 'Return', 'Privaci Policies'];
   return (
-    <Stack p={'30px 75px 35px 75px'}>
+    <Stack p={'30px 75px 35px 75px'} borderTop={'1px solid rgba(159, 159, 159, 1)'}>
       <Grid container spacing={{ md: '10px', sm: '30px', xs: '30px' }}>
         <Grid item xs={12} md={4}>
           <Stack>

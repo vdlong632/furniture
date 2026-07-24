@@ -1,15 +1,25 @@
 import { Box, Button, Divider, Stack, styled, Typography } from '@mui/material';
-import { CloseButton } from 'assets';
+import { CloseButton, DeleteProduct } from 'assets';
+import { useCart } from 'contexts/cart';
+import { useWish } from 'contexts/wish';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTotalProductCart } from 'utils/totalProduct';
 
 export const NavbarAction = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [openWish, setOpenWish] = useState(false);
+  const { cartItem, addToCart, removeFromCart } = useCart();
+  const { wishItem, toggleWish } = useWish();
   const handleClose = () => {
     setOpen(!open);
     // console.log(open);
   };
+  const handleCloseWish = () => {
+    setOpenWish(!openWish);
+  };
+  const totalPrice = useTotalProductCart();
   return (
     <ActionStyed>
       <IconStyled>
@@ -18,7 +28,7 @@ export const NavbarAction = () => {
       <IconStyled>
         <img src="search.png" alt="" />
       </IconStyled>
-      <IconStyled>
+      <IconStyled onClick={handleCloseWish}>
         <img src="heart.png" alt="" />
       </IconStyled>
       <IconStyled onClick={handleClose}>
@@ -47,29 +57,130 @@ export const NavbarAction = () => {
               </Button>
             </Stack>
             <DividerStyled sx={{ width: '75%' }} />
-            <CartList>
-              <Stack height={'105px'}>1</Stack>
-              <Stack height={'105px'}>2</Stack>
-              <Stack height={'105px'}>3</Stack>
-              <Stack height={'105px'}>4</Stack>
-              <Stack height={'105px'}>5</Stack>
-              <Stack height={'105px'}>6</Stack>
-              <Stack height={'105px'}>6</Stack>
-              <Stack height={'105px'}>6</Stack>
+            <CartList height={'60vh'}>
+              {cartItem.map((item) => (
+                <CartItem key={item.id}>
+                  <Box width={'105px'} height={'105px'} borderRadius={'10px'}>
+                    <ImgStyled src={item.images[0]} />
+                  </Box>
+                  <Stack sx={{ marginLeft: '15px' }}>
+                    <Typography
+                      sx={{
+                        fontSize: '16px',
+                        fontWeight: 400,
+                        width: '85%',
+                        textWrap: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis'
+                      }}>
+                      {item.name}
+                    </Typography>
+                    <Stack flexDirection={'row'} alignItems={'center'} gap={'10px'}>
+                      <Typography sx={{ fontSize: '16px', fontWeight: 300 }}>
+                        {item.quantity}
+                      </Typography>
+                      <Typography sx={{ fontSize: '12px', fontWeight: 300 }}>X</Typography>
+                      <Typography
+                        sx={{ fontSize: '12px', fontWeight: 500, color: 'rgba(184, 142, 47, 1)' }}>
+                        Rs. {item.price.toLocaleString('de-DE')}
+                      </Typography>
+                    </Stack>
+                  </Stack>
+                  <Stack sx={{ padding: 0, margin: 0 }} onClick={() => removeFromCart(item)}>
+                    <DeleteProduct />
+                  </Stack>
+                </CartItem>
+              ))}
             </CartList>
             <Stack flexDirection={'row'} justifyContent={'space-between'} pt={'20px'}>
               <Typography>Subtotal</Typography>
               <Typography
                 sx={{ fontSize: '16px', fontWeight: 600, color: 'rgba(184, 142, 47, 1)' }}>
-                Rs. 100000
+                Rs. {totalPrice.toLocaleString('de-DE')}
               </Typography>
             </Stack>
             <DividerStyled sx={{ width: '100%' }} />
             <Stack flexDirection={'row'} justifyContent={'space-between'}>
-              <ButtonStyled onClick={() => navigate('/cart')}>Cart</ButtonStyled>
-              <ButtonStyled onClick={() => navigate('/checkout')}>Checkout</ButtonStyled>
-              <ButtonStyled onClick={() => navigate('/comparison')}>Comparison</ButtonStyled>
+              <ButtonStyled
+                onClick={() => {
+                  navigate('/cart');
+                  handleClose();
+                }}>
+                Cart
+              </ButtonStyled>
+              <ButtonStyled
+                onClick={() => {
+                  (navigate('/checkout'), handleClose());
+                }}>
+                Checkout
+              </ButtonStyled>
+              <ButtonStyled
+                onClick={() => {
+                  (navigate('/comparison'), handleClose());
+                }}>
+                Comparison
+              </ButtonStyled>
             </Stack>
+          </CartModal>
+        </CartOverlay>
+      )}
+      {openWish && (
+        <CartOverlay onClick={handleCloseWish}>
+          <CartModal
+            onClick={(e) => {
+              e.stopPropagation();
+            }}>
+            <Stack
+              display={'flex'}
+              flexDirection={'row'}
+              alignItems={'center'}
+              justifyContent={'space-between'}>
+              <Typography
+                sx={{
+                  fontSize: '24px',
+                  fontWeight: 600,
+                  lineHeight: '100%',
+                  letterSpacing: '0px',
+                  color: 'rgba(0, 0, 0, 1)'
+                }}>
+                WishList
+              </Typography>
+              <Button onClick={handleCloseWish}>
+                <CloseButton />
+              </Button>
+            </Stack>
+            <DividerStyled sx={{ width: '75%' }} />
+            <CartList height={'75vh'}>
+              {wishItem.map((item) => (
+                <CartItem key={item.id}>
+                  <Box width={'105px'} height={'105px'} borderRadius={'10px'}>
+                    <ImgStyled src={item.images[0]} />
+                  </Box>
+                  <Stack sx={{ marginLeft: '15px' }}>
+                    <Typography
+                      sx={{
+                        fontSize: '16px',
+                        fontWeight: 400,
+                        width: '85%',
+                        textWrap: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis'
+                      }}>
+                      {item.name}
+                    </Typography>
+                    <Button
+                      onClick={() => {
+                        addToCart(item, 1);
+                      }}>
+                      Add to cart
+                    </Button>
+                  </Stack>
+                  <Stack sx={{ padding: 0, margin: 0 }} onClick={() => toggleWish(item)}>
+                    <DeleteProduct />
+                  </Stack>
+                </CartItem>
+              ))}
+            </CartList>
           </CartModal>
         </CartOverlay>
       )}
@@ -98,13 +209,14 @@ const CartOverlay = styled(Box)(() => ({
   position: 'fixed',
   top: 0,
   right: 0,
-  width: '100%',
-  height: '100%',
+  width: '100vw',
+  height: '100vh',
   background: 'rgba(0, 0, 0, 0.2)',
   zIndex: 9999,
   display: 'flex',
   justifyContent: 'flex-end',
-  alignItems: 'flex-start'
+  alignItems: 'flex-start',
+  overflowY: 'auto'
 }));
 
 const CartModal = styled(Box)(() => ({
@@ -123,13 +235,21 @@ const DividerStyled = styled(Divider)(() => ({
 
 const CartList = styled(Stack)(() => ({
   flex: 1,
-  height: '63vh',
+  // height: '60vh',
   display: 'flex',
-  flexDirection: 'column',
-  backgroundColor: '#ccc',
-  gap: '10px',
+  gap: '25px',
+  overflow: 'hidden',
   overflowY: 'scroll',
-  scrollBehavior: 'smooth'
+
+  // backgroundColor: '#ccc',
+  // gap: '10px',
+  // scrollBehavior: 'smooth'
+}));
+
+const CartItem = styled(Stack)(() => ({
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center'
 }));
 
 const ButtonStyled = styled(Button)(() => ({
@@ -138,4 +258,11 @@ const ButtonStyled = styled(Button)(() => ({
   borderRadius: '50px',
   border: '1px solid rgba(0, 0, 0, 1)',
   padding: '5px 25px'
+}));
+
+const ImgStyled = styled('img')(() => ({
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  borderRadius: '10px'
 }));

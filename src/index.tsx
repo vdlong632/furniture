@@ -14,6 +14,8 @@ import theme from './styles/theme';
 import { ThemeProvider } from '@mui/material';
 import { AuthProvider } from 'contexts/auth';
 import { ClinicProvider } from 'contexts/clinic';
+import { CartProvider } from 'contexts/cart';
+import { WishProvider } from 'contexts/wish';
 
 // Initialize axios
 configureAxios();
@@ -28,12 +30,14 @@ root.render(
     <ThemeProvider theme={theme}>
       <LoadingProvider>
         <AuthProvider>
-          <ClinicProvider>
-            <FlashProvider>
-              <App />
-              <Flash />
-            </FlashProvider>
-          </ClinicProvider>
+          <CartProvider>
+            <WishProvider>
+              <FlashProvider>
+                <App />
+                <Flash />
+              </FlashProvider>
+            </WishProvider>
+          </CartProvider>
         </AuthProvider>
       </LoadingProvider>
     </ThemeProvider>

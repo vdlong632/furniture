@@ -3,8 +3,10 @@ import { Banner } from './components/Banner';
 import { RoomType } from './components/RoomType';
 import { Inspiration } from './components/Inspiration';
 import { ProductSection } from './components/ProductSection';
+import { useProductSection } from './hook';
 
 export const HomePage = () => {
+  const { products } = useProductSection();
   return (
     <Stack>
       <Banner />
@@ -17,11 +19,11 @@ export const HomePage = () => {
           letterSpacing: '0%',
           color: 'rgba(58, 58, 58, 1)',
           textAlign: 'center',
-          margin: '50px 0'
+          marginTop: '50px'
         }}>
         Our Products
       </Typography>
-      <ProductSection limit={8} showMore={true} />
+      <ProductSection products={products} limit={8} showMore={true} />
       <Inspiration />
     </Stack>
   );

@@ -5,6 +5,8 @@ import { TypeBillingForm } from '../formType';
 import { ButtonCustom } from 'app/components/elements/ButtonCustom';
 import { ORDER_OPTIONS } from '../type';
 import { useState } from 'react';
+import { useCart } from 'contexts/cart';
+import { useTotalProductCart } from 'utils/totalProduct';
 
 type Props = {
   handleSubmit: () => void;
@@ -17,7 +19,8 @@ export const Order = ({ handleSubmit }: Props) => {
     watch,
     formState: { errors }
   } = useFormContext<TypeBillingForm>();
-
+  const { cartItem } = useCart();
+  const totalPrice = useTotalProductCart();
   return (
     <Stack flex={1} m={'30px'} width={'73%'}>
       <Stack
@@ -29,9 +32,21 @@ export const Order = ({ handleSubmit }: Props) => {
           <TitleStyled>Product</TitleStyled>
           <TitleStyled>Subtotal</TitleStyled>
         </StackStyled>
+        {cartItem.map((item) => (
+          <StackStyled>
+            <Stack flexDirection={'row'} gap={'10px'}>
+              <ProductStyled>{item.name}</ProductStyled>
+              <Typography>x</Typography>
+              <Typography>{item.quantity}</Typography>
+            </Stack>
+            <TextStyled>Rs. {item.price.toLocaleString('de-DE')}</TextStyled>
+          </StackStyled>
+        ))}
         <StackStyled>
-          <ProductStyled>Product 1</ProductStyled>
-          <TextStyled>Rs: 100.000</TextStyled>
+          <Typography sx={{ fontSize: '16px', fontWeight: 400 }}>Total</Typography>
+          <Typography sx={{ fontSize: '24px', fontWeight: 700, color: 'rgba(184, 142, 47, 1)' }}>
+            Rs. {totalPrice.toLocaleString('de-DE')}
+          </Typography>
         </StackStyled>
       </Stack>
       <Stack flexDirection={'column'}>
@@ -59,6 +74,7 @@ export const Order = ({ handleSubmit }: Props) => {
             '&:hover': { backgroundColor: 'transparent' }
           }}
           textSx={{ color: 'rgba(0, 0, 0, 1)' }}
+          disabled={cartItem.length < 1}
         />
       </Stack>
     </Stack>
@@ -68,7 +84,8 @@ export const Order = ({ handleSubmit }: Props) => {
 const StackStyled = styled(Stack)(() => ({
   display: 'flex',
   flexDirection: 'row',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
+  alignItems: 'center'
 }));
 
 const TitleStyled = styled(Typography)(() => ({
