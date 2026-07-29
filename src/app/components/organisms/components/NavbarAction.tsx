@@ -10,7 +10,7 @@ export const NavbarAction = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [openWish, setOpenWish] = useState(false);
-  const { cartItem, addToCart, removeFromCart } = useCart();
+  const { cartItem, addToCart, removeFromCart, decreaseCart } = useCart();
   const { wishItem, toggleWish } = useWish();
   const handleClose = () => {
     setOpen(!open);
@@ -63,12 +63,12 @@ export const NavbarAction = () => {
                   <Box width={'105px'} height={'105px'} borderRadius={'10px'}>
                     <ImgStyled src={item.images[0]} />
                   </Box>
-                  <Stack sx={{ marginLeft: '15px' }}>
+                  <Stack sx={{ marginLeft: '15px', maxWidth: '160px' }}>
                     <Typography
                       sx={{
                         fontSize: '16px',
                         fontWeight: 400,
-                        width: '85%',
+                        width: '95%',
                         textWrap: 'nowrap',
                         overflow: 'hidden',
                         textOverflow: 'ellipsis'
@@ -84,6 +84,7 @@ export const NavbarAction = () => {
                         sx={{ fontSize: '12px', fontWeight: 500, color: 'rgba(184, 142, 47, 1)' }}>
                         Rs. {item.price.toLocaleString('de-DE')}
                       </Typography>
+                      <Box sx={{padding: '5px', cursor: 'pointer'}} onClick={() => {decreaseCart(item.id)}}>-</Box>
                     </Stack>
                   </Stack>
                   <Stack sx={{ padding: 0, margin: 0 }} onClick={() => removeFromCart(item)}>
@@ -171,7 +172,10 @@ export const NavbarAction = () => {
                     <Button
                       onClick={() => {
                         addToCart(item, 1);
-                      }}>
+                        toggleWish(item)
+                      }} 
+                      sx={{width: 'fit-content', bgcolor: 'gray'}}
+                      >
                       Add to cart
                     </Button>
                   </Stack>
@@ -194,6 +198,9 @@ const ActionStyed = styled(Stack)(({ theme }) => ({
   gap: 'clamp(20px, 4vw, 40px)',
   [theme.breakpoints.down('md')]: {
     gap: '55px'
+  },
+  [theme.breakpoints.down('sm')]: {
+    gap: '35px'
   }
 }));
 
@@ -209,8 +216,8 @@ const CartOverlay = styled(Box)(() => ({
   position: 'fixed',
   top: 0,
   right: 0,
-  width: '100vw',
-  height: '100vh',
+  width: '100%',
+  height: '100%',
   background: 'rgba(0, 0, 0, 0.2)',
   zIndex: 9999,
   display: 'flex',
@@ -224,7 +231,7 @@ const CartModal = styled(Box)(() => ({
   height: '100%',
   position: 'fixed',
   backgroundColor: '#fff',
-  padding: '25px'
+  padding: '25px',
 }));
 
 const DividerStyled = styled(Divider)(() => ({
@@ -249,7 +256,8 @@ const CartList = styled(Stack)(() => ({
 const CartItem = styled(Stack)(() => ({
   display: 'flex',
   flexDirection: 'row',
-  alignItems: 'center'
+  alignItems: 'center',
+  justifyContent: 'space-around'
 }));
 
 const ButtonStyled = styled(Button)(() => ({

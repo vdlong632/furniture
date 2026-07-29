@@ -12,7 +12,6 @@ interface CustomRadioGroupProps {
   name?: string;
   label?: string;
   value: string;
-  detail?: string;
   onChange: (value: string) => void;
   options: { label: string; value: string; detail: string }[];
 }
@@ -21,7 +20,6 @@ export const CustomRadioGroup = ({
   name,
   label,
   value,
-  detail,
   onChange,
   options
 }: CustomRadioGroupProps) => {
