@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Stack,
   styled,
@@ -88,13 +89,13 @@ export const CartTable = () => {
                   </Typography>
                 </TableCellStyled>
                 <TableCellStyled>
-                  <Button
-                    sx={{ '&:hover': { backgroundColor: 'transparent', padding: 0 } }}
+                  <Box
+                    sx={{ cursor: 'pointer', '&:hover': { backgroundColor: 'transparent', padding: 0 } }}
                     onClick={() => {
                       removeFromCart(item);
                     }}>
                     <DeleteBin />
-                  </Button>
+                  </Box>
                 </TableCellStyled>
               </TableRowStyled>
             ))}

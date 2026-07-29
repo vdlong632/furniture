@@ -14,7 +14,7 @@ export const BlogPage = () => {
   return (
     <Stack flex={1}>
       <PageHeader title={'Blog'} route={[{ label: 'Blog', path: '/blog' }]} />
-      <Stack padding={'80px'} flexDirection={'row'} gap={'30px'}>
+      <Stack padding={'80px'} flexDirection={{lg: 'row', sm: 'column-reverse', xs: 'column-reverse'}} gap={'30px'}>
         <BlogList limit={3} blogs={blogs} />
         <Stack padding={'0 20px'} alignItems={'center'}>
           <Stack width={'80%'}>

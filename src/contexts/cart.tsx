@@ -8,12 +8,14 @@ type CartContextType = {
   cartItem: CartItem[];
   addToCart: (product: Product, quantity?: number) => void;
   removeFromCart: (product: Product) => void;
+  decreaseCart: (productId: number) => void;
 };
 
 const CartContext = createContext<CartContextType>({
   cartItem: [],
   addToCart: () => null,
-  removeFromCart: () => null
+  removeFromCart: () => null,
+  decreaseCart: () => null
 });
 
 export function useCart(): CartContextType {
@@ -25,6 +27,7 @@ type Props = {
 };
 export function CartProvider({ children }: Props) {
   const [cartItem, setCartItem] = useState<CartItem[]>([]);
+
   const addToCart = (product: Product, quantity = 1) => {
     setCartItem((prevItem) => {
       const existing = prevItem.find((item) => item.id === product.id);
@@ -45,10 +48,22 @@ export function CartProvider({ children }: Props) {
     setCartItem((prevItem) => prevItem.filter((item) => item.id !== product.id));
   };
 
+  const decreaseCart = (productId: number) => {
+    setCartItem((prevItem) => {
+      const existing = prevItem.filter((item) => item.quantity > 1);
+      if (existing) {
+        return prevItem.map((item) =>
+          (item.id === productId && item.quantity > 1) ? { ...item, quantity: item.quantity - 1 } : item
+        );
+      } return [...prevItem]
+    });
+  };
+
   const value = {
     cartItem,
     addToCart,
-    removeFromCart
+    removeFromCart,
+    decreaseCart
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

@@ -1,5 +1,4 @@
 import { Box, Button, Grid, Stack, styled, Typography } from '@mui/material';
-import { useProductSection } from '../hook';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { CompareIcon, Hearted, HeartIcon, ShareIcon } from 'assets';
 import { Product } from 'services/product';
@@ -18,10 +17,8 @@ export const ProductSection = ({
   showMore = false,
   filterRoom = 'default'
 }: Props) => {
-  // const { products } = useProductSection();
   const slug = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const location = useLocation();
   const { addToCart } = useCart();
   const { wishItem, toggleWish } = useWish();
 
@@ -38,9 +35,7 @@ export const ProductSection = ({
   const handleCompare = (e: React.MouseEvent) => {
     e.stopPropagation();
   };
-  // const handleHeart = (productId: number) => {
-  //   toggleWish(productId);
-  // };
+
 
   return (
     <Stack flex={1} m={'50px 75px'}>

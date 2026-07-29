@@ -37,3 +37,4 @@ export function WishProvider({ children }: Props) {
   const value = { wishItem, toggleWish };
   return <WishContext.Provider value={value}>{children}</WishContext.Provider>;
 }
+
