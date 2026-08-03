@@ -1,10 +1,14 @@
 import { Box, Button, Grid, Stack, Typography } from '@mui/material';
 import { NextIcon } from 'assets';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+// import 'react-multi-carousel/lib/styles.css';
 
 export const Inspiration = () => {
-  const images = ['/bedroom.png', '/bedroom2.png', '/dining.png', '/living.png'];
+  const images = [
+    '/bedroom.png',
+    '/bedroom2.png',
+    '/dining.png',
+    '/living.png'
+  ];
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1024 },
@@ -125,20 +129,22 @@ export const Inspiration = () => {
           </Box>
         </Grid>
         <Grid item md={4} sm={6} xs={12}>
-          <Carousel
-            responsive={responsive}
-            infinite
-            autoPlay={false}
-            autoPlaySpeed={3000}
-            keyBoardControl={true}
-            showDots={true}>
-            {images.map((src, i) => (
-              <Box key={i} sx={{ px: 1 }}>
-                <img src={src} alt={`slide-${i}`} style={{ width: '100%', height: '100%' }} />
-              </Box>
-            ))}
-          </Carousel>
-        </Grid>
+          <Stack height={'100%'} width={'100%'}>
+            {/* <Carousel
+              responsive={responsive}
+              infinite
+              autoPlay={false}
+              autoPlaySpeed={3000}
+              keyBoardControl={true}
+              showDots={true}>
+              {...images.map((src, i) => (
+                <Box key={i} sx={{ px: 1, width: '100%', height: '100%', overflow: 'hidden', overflowX: 'scroll'}}>
+                  <img src={src} alt={`slide-${i}`} style={{ minWidth: '100%'}} />
+                </Box>
+              ))}
+            </Carousel> */}
+          </Stack>
+        </Grid> 
       </Grid>
     </Stack>
   );

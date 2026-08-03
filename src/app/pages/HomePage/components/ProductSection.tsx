@@ -142,7 +142,10 @@ export const ProductSection = ({
                 <Stack
                   flexDirection={'row'}
                   justifyContent={'space-between'}
-                  alignItems={'flex-end'}>
+                  alignItems={'flex-end'}
+                  flexWrap={'wrap'}
+                  gap={'5px'}
+                  >
                   <Typography
                     sx={{
                       fontSize: '18px',
@@ -185,7 +188,8 @@ export const ProductSection = ({
 const ProductStyled = styled(Stack)(() => ({
   backgroundColor: 'rgba(244, 245, 247, 1)',
   position: 'relative',
-  cursor: 'pointer'
+  cursor: 'pointer',
+  boxSizing: 'content-box',
 }));
 
 const ImgStyled = styled('img')(() => ({

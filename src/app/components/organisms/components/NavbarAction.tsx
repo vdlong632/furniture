@@ -227,7 +227,7 @@ const CartOverlay = styled(Box)(() => ({
 }));
 
 const CartModal = styled(Box)(() => ({
-  width: '30%',
+  width: '360px',
   height: '100%',
   position: 'fixed',
   backgroundColor: '#fff',
@@ -247,10 +247,6 @@ const CartList = styled(Stack)(() => ({
   gap: '25px',
   overflow: 'hidden',
   overflowY: 'scroll'
-
-  // backgroundColor: '#ccc',
-  // gap: '10px',
-  // scrollBehavior: 'smooth'
 }));
 
 const CartItem = styled(Stack)(() => ({

@@ -4,6 +4,8 @@ body {
   width: 100%;
   font-family: 'Poppins';
   overflow-x: hidden;
+  position: relative;
+
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {

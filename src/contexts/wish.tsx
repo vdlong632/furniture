@@ -23,10 +23,10 @@ export function WishProvider({ children }: Props) {
   const [wishItem, setWishItem] = useState<Product[]>([]);
 
   const toggleWish = (product: Product) => {
-    setWishItem((prev) =>
-      prev.some((item) => item.id === product.id)
-        ? prev.filter((item) => item.id !== product.id)
-        : [...prev, product]
+    setWishItem((prevItem) =>
+      prevItem.some((item) => item.id === product.id)
+        ? prevItem.filter((item) => item.id !== product.id)
+        : [...prevItem, product]
     );
   };
 
@@ -38,3 +38,10 @@ export function WishProvider({ children }: Props) {
   return <WishContext.Provider value={value}>{children}</WishContext.Provider>;
 }
 
+// const toggleWish = (product: Product) => {
+//   setWishItem((prev) =>
+//     prev.some((item) => item.id === product.id)
+//       ? prev.filter((item) => item.id !== product.id)
+//       : [...prev, product]
+//   );
+// };

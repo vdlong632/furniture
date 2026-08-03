@@ -43,7 +43,7 @@ export const Order = ({ handleSubmit }: Props) => {
           </StackStyled>
         ))}
         <StackStyled>
-          <Typography sx={{ fontSize: '16px', fontWeight: 400 }}>Total</Typography>
+          <Typography fontSize={'16px'} fontWeight={400}>Total</Typography>
           <Typography sx={{ fontSize: '24px', fontWeight: 700, color: 'rgba(184, 142, 47, 1)' }}>
             Rs. {totalPrice.toLocaleString('de-DE')}
           </Typography>

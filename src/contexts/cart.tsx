@@ -50,12 +50,15 @@ export function CartProvider({ children }: Props) {
 
   const decreaseCart = (productId: number) => {
     setCartItem((prevItem) => {
-      const existing = prevItem.filter((item) => item.quantity > 1);
+      const existing = prevItem.find((item) => item.id === productId);
       if (existing) {
         return prevItem.map((item) =>
-          (item.id === productId && item.quantity > 1) ? { ...item, quantity: item.quantity - 1 } : item
+          item.id === productId && item.quantity > 1
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
         );
-      } return [...prevItem]
+      }
+      return [...prevItem];
     });
   };
 
@@ -68,3 +71,4 @@ export function CartProvider({ children }: Props) {
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
+

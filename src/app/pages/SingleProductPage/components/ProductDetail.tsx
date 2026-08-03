@@ -1,4 +1,5 @@
-import { Box, Button, Stack, styled, Typography } from '@mui/material';
+import { Box, Button, Checkbox, Stack, styled, Typography } from '@mui/material';
+import { CheckboxCustom } from 'app/components/elements/CheckBox';
 import { FacebookIcon, LinkedinIcon, TwitterIcon } from 'assets';
 import { useCart } from 'contexts/cart';
 import { useState } from 'react';
@@ -9,8 +10,8 @@ type Props = {
 };
 export const ProductDetail = ({ product }: Props) => {
   const [picture, setPicture] = useState(product?.images[0]);
-  const [selectedSize, setSelectedSize] = useState('');
-  const [selectedColor, setSelectedColor] = useState('');
+  const [selectedSize, setSelectedSize] = useState(product?.sizes[0]?.code || '');
+  const [selectedColor, setSelectedColor] = useState(product?.colors[0]?.code || '');
   const [count, setCount] = useState(1);
   const { addToCart } = useCart();
 
@@ -99,16 +100,18 @@ export const ProductDetail = ({ product }: Props) => {
               }}></Box>
           ))}
         </Stack>
-        <Stack flexDirection={'row'} gap={'20px'}>
+        <Stack flexDirection={'row'} gap={'20px'} flexWrap={'nowrap'} height={'50px'} alignItems={'center'}>
           <Stack
             flexDirection={'row'}
+            alignItems={'center'}
             gap={'30px'}
             sx={{
               border: '1px solid rgba(159, 159, 159, 1)',
-              padding: '15px',
+              padding: ' 10px 15px',
               // width: '150px',
               borderRadius: '10px',
-              boxSizing: 'border-box'
+              boxSizing: 'border-box',
+              height: '100%',
             }}>
             <Typography onClick={decrease}>-</Typography>
             <Typography width={'30px'} textAlign={'center'}>
@@ -116,7 +119,7 @@ export const ProductDetail = ({ product }: Props) => {
             </Typography>
             <Typography onClick={increase}>+</Typography>
           </Stack>
-          <ButtonStyled onClick={handleAddToCart}>Add To Cart</ButtonStyled>
+          <ButtonStyled onClick={handleAddToCart} sx={{md: {fontSize: '20px'}}}>Add To Cart</ButtonStyled>
           <ButtonStyled>+ Compare</ButtonStyled>
         </Stack>
         <Stack
@@ -181,8 +184,8 @@ const MainImg = styled('img')(({ theme }) => ({
 const ButtonStyled = styled(Button)(() => ({
   border: '1px solid rgba(0, 0, 0, 1)',
   borderRadius: '15px',
-  padding: '0 40px',
-  fontSize: '20px',
+  lineHeight: '2.5',
+  textWrap: 'nowrap',
   fontWeight: '400',
   '&:hover': {
     backgroundColor: 'none'

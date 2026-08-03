@@ -3,7 +3,7 @@ import { ReactNode, useState } from 'react';
 import { Logo } from './components/Logo';
 import { NavbarMenu } from './components/NavbarMenu';
 import { NavbarAction } from './components/NavbarAction';
-import { MenuButton } from 'assets';
+import { CloseIcon, MenuButton } from 'assets';
 import { ROUTE_MENU } from 'const/menu';
 import { Link, NavLink } from 'react-router-dom';
 import { Footer } from './components/Footer';
@@ -17,17 +17,26 @@ export const NavbarLayout = ({ children }: Props) => {
   return (
     <Stack>
       <WrapperNavbar>
-        <NavbarContent>
+        <NavbarContent sx={{md: 'position: fixed'}}>
           <Logo />
           <NavbarMenu />
           <NavbarAction />
           <Stack display={{ sm: 'flex', md: 'none' }}>
-            <MenuButton
-              height={'29px'}
-              width={'24px'}
-              color={'inherit'}
-              onClick={() => setOpen(!open)}
-            />
+            {!open ? (
+              <MenuButton
+                height={'29px'}
+                width={'24px'}
+                color={'inherit'}
+                onClick={() => setOpen(!open)}
+              />
+            ) : (
+              <CloseIcon
+                height={'29px'}
+                width={'24px'}
+                color={'inherit'}
+                onClick={() => setOpen(!open)}
+              />
+            )}
           </Stack>
         </NavbarContent>
       </WrapperNavbar>
@@ -67,7 +76,7 @@ const NavbarContent = styled(Stack)(() => ({
 
 const MenuToggle = styled(Stack)(() => ({
   display: 'none',
-  position: 'sticky',
+  position: 'absolute',
   top: '100px',
   left: 0,
   right: 0,

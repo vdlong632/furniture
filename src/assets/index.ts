@@ -64,3 +64,4 @@ export { ReactComponent as LinkedinIcon } from 'assets/icons/linkedin_icon.svg';
 export { ReactComponent as TwitterIcon } from 'assets/icons/twitter_icon.svg';
 export { ReactComponent as DeleteProduct } from 'assets/icons/delete_icon.svg';
 export { ReactComponent as Hearted } from 'assets/icons/hearted_icon.svg';
+export { ReactComponent as CloseIcon } from 'assets/icons/close_icon.svg';

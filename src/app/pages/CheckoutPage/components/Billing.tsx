@@ -15,7 +15,7 @@ export const Billing = () => {
     formState: { errors }
   } = useFormContext<TypeBillingForm>();
   return (
-    <Stack p={'30px'} width={'100%'}>
+    <Stack zIndex={1} p={'30px'} width={'100%'}>
       <Typography
         sx={{
           fontSize: '36px',
