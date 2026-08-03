@@ -90,7 +90,10 @@ export const CartTable = () => {
                 </TableCellStyled>
                 <TableCellStyled>
                   <Box
-                    sx={{ cursor: 'pointer', '&:hover': { backgroundColor: 'transparent', padding: 0 } }}
+                    sx={{
+                      cursor: 'pointer',
+                      '&:hover': { backgroundColor: 'transparent', padding: 0 }
+                    }}
                     onClick={() => {
                       removeFromCart(item);
                     }}>

@@ -100,7 +100,12 @@ export const ProductDetail = ({ product }: Props) => {
               }}></Box>
           ))}
         </Stack>
-        <Stack flexDirection={'row'} gap={'20px'} flexWrap={'nowrap'} height={'50px'} alignItems={'center'}>
+        <Stack
+          flexDirection={'row'}
+          gap={'20px'}
+          flexWrap={'nowrap'}
+          height={'50px'}
+          alignItems={'center'}>
           <Stack
             flexDirection={'row'}
             alignItems={'center'}
@@ -111,7 +116,7 @@ export const ProductDetail = ({ product }: Props) => {
               // width: '150px',
               borderRadius: '10px',
               boxSizing: 'border-box',
-              height: '100%',
+              height: '100%'
             }}>
             <Typography onClick={decrease}>-</Typography>
             <Typography width={'30px'} textAlign={'center'}>
@@ -119,7 +124,9 @@ export const ProductDetail = ({ product }: Props) => {
             </Typography>
             <Typography onClick={increase}>+</Typography>
           </Stack>
-          <ButtonStyled onClick={handleAddToCart} sx={{md: {fontSize: '20px'}}}>Add To Cart</ButtonStyled>
+          <ButtonStyled onClick={handleAddToCart} sx={{ md: { fontSize: '20px' } }}>
+            Add To Cart
+          </ButtonStyled>
           <ButtonStyled>+ Compare</ButtonStyled>
         </Stack>
         <Stack

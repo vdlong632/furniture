@@ -84,7 +84,13 @@ export const NavbarAction = () => {
                         sx={{ fontSize: '12px', fontWeight: 500, color: 'rgba(184, 142, 47, 1)' }}>
                         Rs. {item.price.toLocaleString('de-DE')}
                       </Typography>
-                      <Box sx={{padding: '5px', cursor: 'pointer'}} onClick={() => {decreaseCart(item.id)}}>-</Box>
+                      <Box
+                        sx={{ padding: '5px', cursor: 'pointer' }}
+                        onClick={() => {
+                          decreaseCart(item.id);
+                        }}>
+                        -
+                      </Box>
                     </Stack>
                   </Stack>
                   <Stack sx={{ padding: 0, margin: 0 }} onClick={() => removeFromCart(item)}>
@@ -172,10 +178,9 @@ export const NavbarAction = () => {
                     <Button
                       onClick={() => {
                         addToCart(item, 1);
-                        toggleWish(item)
-                      }} 
-                      sx={{width: 'fit-content', bgcolor: 'gray'}}
-                      >
+                        toggleWish(item);
+                      }}
+                      sx={{ width: 'fit-content', bgcolor: 'gray' }}>
                       Add to cart
                     </Button>
                   </Stack>
@@ -231,7 +236,7 @@ const CartModal = styled(Box)(() => ({
   height: '100%',
   position: 'fixed',
   backgroundColor: '#fff',
-  padding: '25px',
+  padding: '25px'
 }));
 
 const DividerStyled = styled(Divider)(() => ({

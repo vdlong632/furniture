@@ -13,7 +13,7 @@ export const BlogList = ({ limit, blogs }: Props) => {
 
   const displayedBlog = limit ? blogs.slice(0, limit) : blogs;
   return (
-    <Stack flex={1} width={{lg: '65%', md: '100%'}} gap={'50px'}>
+    <Stack flex={1} width={{ lg: '65%', md: '100%' }} gap={'50px'}>
       {displayedBlog.map((blog) => (
         <Stack>
           <ImgStyled src={blog.image} />

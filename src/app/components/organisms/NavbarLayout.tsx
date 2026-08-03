@@ -17,7 +17,7 @@ export const NavbarLayout = ({ children }: Props) => {
   return (
     <Stack>
       <WrapperNavbar>
-        <NavbarContent sx={{md: 'position: fixed'}}>
+        <NavbarContent sx={{ md: 'position: fixed' }}>
           <Logo />
           <NavbarMenu />
           <NavbarAction />

@@ -71,4 +71,3 @@ export function CartProvider({ children }: Props) {
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
-

@@ -3,12 +3,7 @@ import { NextIcon } from 'assets';
 // import 'react-multi-carousel/lib/styles.css';
 
 export const Inspiration = () => {
-  const images = [
-    '/bedroom.png',
-    '/bedroom2.png',
-    '/dining.png',
-    '/living.png'
-  ];
+  const images = ['/bedroom.png', '/bedroom2.png', '/dining.png', '/living.png'];
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1024 },
@@ -144,7 +139,7 @@ export const Inspiration = () => {
               ))}
             </Carousel> */}
           </Stack>
-        </Grid> 
+        </Grid>
       </Grid>
     </Stack>
   );

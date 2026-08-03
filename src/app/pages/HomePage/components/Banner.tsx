@@ -4,7 +4,10 @@ export const Banner = () => {
   return (
     <BannerBg>
       <ImgStyled src="mockupwall.png" alt="" />
-      <MaskBanner sx={{ padding: { md: '50px 30px 30px 30px', sm: '35px 0 15px 25px', xs: '20px 0 10px 10px' } }}>
+      <MaskBanner
+        sx={{
+          padding: { md: '50px 30px 30px 30px', sm: '35px 0 15px 25px', xs: '20px 0 10px 10px' }
+        }}>
         <Typography
           sx={{
             color: 'rgba(51, 51, 51, 1)',
@@ -21,7 +24,7 @@ export const Banner = () => {
             width: '80%',
             // fontSize: '52px',
             // fontSize: 'clamp(20px, 4vw, 52px)',
-            fontSize: {md: 'clamp(20px, 4vw, 52px)', sm: 'clamp(20px, 4vw, 32px)'},
+            fontSize: { md: 'clamp(20px, 4vw, 52px)', sm: 'clamp(20px, 4vw, 32px)' },
             fontWeight: 700,
             lineHeight: '1.2',
             letterSpacing: '0px',
@@ -50,7 +53,10 @@ export const Banner = () => {
             color: 'rgba(255, 255, 255, 1)',
             borderRadius: 0,
             // padding: 'clamp(8px, calc(4vw - 8px), 15px) clamp(20px, calc(4vw - 10px), 30px)',
-            padding: {md: 'clamp(8px, calc(4vw - 8px), 15px) clamp(20px, calc(4vw - 10px), 30px)', sm: 'clamp(8px, calc(4vw - 8px), 10px) clamp(20px, calc(4vw - 10px), 15px)'},
+            padding: {
+              md: 'clamp(8px, calc(4vw - 8px), 15px) clamp(20px, calc(4vw - 10px), 30px)',
+              sm: 'clamp(8px, calc(4vw - 8px), 10px) clamp(20px, calc(4vw - 10px), 15px)'
+            },
             marginTop: 'clamp(10px, 2vw, 45px)',
             '&:hover': {
               backgroundColor: 'rgba(184, 142, 47, 1)'

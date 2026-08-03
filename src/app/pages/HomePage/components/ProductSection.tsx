@@ -36,7 +36,6 @@ export const ProductSection = ({
     e.stopPropagation();
   };
 
-
   return (
     <Stack flex={1} m={'50px 75px'}>
       <Grid container spacing={'20px'}>
@@ -144,8 +143,7 @@ export const ProductSection = ({
                   justifyContent={'space-between'}
                   alignItems={'flex-end'}
                   flexWrap={'wrap'}
-                  gap={'5px'}
-                  >
+                  gap={'5px'}>
                   <Typography
                     sx={{
                       fontSize: '18px',
@@ -189,7 +187,7 @@ const ProductStyled = styled(Stack)(() => ({
   backgroundColor: 'rgba(244, 245, 247, 1)',
   position: 'relative',
   cursor: 'pointer',
-  boxSizing: 'content-box',
+  boxSizing: 'content-box'
 }));
 
 const ImgStyled = styled('img')(() => ({
