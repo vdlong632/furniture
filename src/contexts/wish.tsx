@@ -37,11 +37,3 @@ export function WishProvider({ children }: Props) {
   const value = { wishItem, toggleWish };
   return <WishContext.Provider value={value}>{children}</WishContext.Provider>;
 }
-
-// const toggleWish = (product: Product) => {
-//   setWishItem((prev) =>
-//     prev.some((item) => item.id === product.id)
-//       ? prev.filter((item) => item.id !== product.id)
-//       : [...prev, product]
-//   );
-// };

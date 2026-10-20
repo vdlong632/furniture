@@ -64,7 +64,7 @@ module.exports = defineConfig([
       parserOptions: {}
     },
 
-    files: ['**/.eslintrc.{js,cjs}', 'eslint.config.cjs', 'mock/**/*.cjs'],
+    files: ['**/.eslintrc.{js,cjs}', 'eslint.config.cjs'],
 
     rules: {
       '@typescript-eslint/no-require-imports': 'off',

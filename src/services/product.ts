@@ -42,29 +42,12 @@ export interface cartItem extends Product {
   quantity: number;
 }
 
-// export interface ListProductParams {
-//   page?: number;
-//   limit?: number;
-// }
-
-// export interface ListProductResponse {
-//   list: Product[];
-//   total: number;
-// }
-
-// export const getProduct = async (params?: ListProductParams): Promise<ListProductResponse> => {
-//   const { data } = await axios.get<ListProductResponse>('http://localhost:3001/api/products', {
-//     params
-//   });
-//   return data;
-// };
-
 export const getProduct = async () => {
-  const { data } = await axios.get('http://localhost:3001/api/products');
+  const { data } = await axios.get<Product[]>('/data/products.json');
   return data;
 };
 
 export const getProductDetail = async (slug: string) => {
-  const { data } = await axios.get(`http://localhost:3001/api/products/slug/${slug}`);
-  return data;
+  const products = await getProduct();
+  return products.find((product) => product.slug === slug) ?? null;
 };

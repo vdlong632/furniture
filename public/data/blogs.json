@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "slug": "going-all-in-with-millennial-design",
+    "title": "Going all-in with millennial design",
+    "author": "Admin",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in.",
+    "category": "Wood",
+    "image": "/living.png",
+    "published_at": "14 Oct 2022"
+  },
+  {
+    "id": 2,
+    "slug": "exploring-new-ways-of-decorating",
+    "title": "Exploring new ways of decorating",
+    "author": "Admin",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in.",
+    "category": "Handmade",
+    "image": "/dining.png",
+    "published_at": "03 Aug 2022"
+  },
+  {
+    "id": 3,
+    "slug": "handmade-pieces-that-took-time-to-make",
+    "title": "Handmade pieces that took time to make",
+    "author": "Admin",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in.",
+    "category": "Wood",
+    "image": "/bedroom.png",
+    "published_at": "28 Jun 2022"
+  },
+  {
+    "id": 4,
+    "slug": "modern-home-in-milan",
+    "title": "Modern home in Milan",
+    "author": "Admin",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in.",
+    "category": "Interior",
+    "image": "/bedroom2.png",
+    "published_at": "12 May 2022"
+  },
+  {
+    "id": 5,
+    "slug": "colorful-office-redesign",
+    "title": "Colorful office redesign",
+    "author": "Admin",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in.",
+    "category": "Design",
+    "image": "/living.png",
+    "published_at": "01 Mar 2022"
+  }
+]
