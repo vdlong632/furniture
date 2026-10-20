@@ -14,7 +14,8 @@ export const RelatedProduct = ({ currentCategory, currentProductId }: Props) => 
   );
   return (
     <Stack>
-      <Typography sx={{ textAlign: 'center', fontSize: '36px', fontWeight: 500 }}>
+      <Typography
+        sx={{ textAlign: 'center', fontSize: { xs: '26px', md: '36px' }, fontWeight: 500 }}>
         Related Product
       </Typography>
       <ProductSection limit={4} products={related} showMore={true} />

@@ -13,11 +13,15 @@ export const BlogList = ({ limit, blogs }: Props) => {
 
   const displayedBlog = limit ? blogs.slice(0, limit) : blogs;
   return (
-    <Stack flex={1} width={{ lg: '65%', md: '100%' }} gap={'50px'}>
+    <Stack flex={1} width={{ xs: '100%', lg: '65%' }} gap={'50px'}>
       {displayedBlog.map((blog) => (
-        <Stack>
+        <Stack key={blog.id}>
           <ImgStyled src={blog.image} />
-          <Stack flexDirection={'row'} gap={'30px'} m={'15px 0'}>
+          <Stack
+            flexDirection={'row'}
+            flexWrap={'wrap'}
+            gap={{ xs: '8px 20px', md: '30px' }}
+            m={'15px 0'}>
             <Stack flexDirection={'row'} gap={'5px'}>
               <DashIcon />
               <InfoBlog>{blog.author}</InfoBlog>

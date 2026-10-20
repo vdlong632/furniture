@@ -13,8 +13,9 @@ export const Logo = () => {
 };
 
 const LogoWrapper = styled(Stack)(() => ({
-  // width: '185px',
   height: '100%',
+  alignItems: 'center',
+  flexShrink: 0,
   display: 'flex',
   flexDirection: 'row',
   gap: '5px',
@@ -23,7 +24,7 @@ const LogoWrapper = styled(Stack)(() => ({
 
 const TextStyled = styled(Typography)(() => ({
   fontFamily: 'Montserrat, sans-serif',
-  fontSize: 'clamp(18px, 34vw, 34px)',
+  fontSize: 'clamp(22px, 3vw, 34px)',
   fontWeight: 700,
   color: 'rgba(0, 0, 0, 1)',
   lineHeight: '100%',

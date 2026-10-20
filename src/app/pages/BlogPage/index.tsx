@@ -15,12 +15,15 @@ export const BlogPage = () => {
     <Stack flex={1}>
       <PageHeader title={'Blog'} route={[{ label: 'Blog', path: '/blog' }]} />
       <Stack
-        padding={'80px'}
+        padding={{ xs: '32px 16px', sm: '40px 32px', md: '80px' }}
         flexDirection={{ lg: 'row', sm: 'column-reverse', xs: 'column-reverse' }}
         gap={'30px'}>
         <BlogList limit={3} blogs={blogs} />
-        <Stack padding={'0 20px'} alignItems={'center'}>
-          <Stack width={'80%'}>
+        <Stack
+          padding={{ xs: 0, md: '0 20px' }}
+          alignItems={'center'}
+          width={{ xs: '100%', lg: '35%' }}>
+          <Stack width={{ xs: '100%', sm: '80%' }}>
             <InputText
               inputProps={{
                 sx: { alignItems: 'center' }
@@ -31,7 +34,7 @@ export const BlogPage = () => {
                 </InputAdornment>
               }
             />
-            <Stack padding={'30px 0 30px 30px'} gap={'25px'}>
+            <Stack padding={{ xs: '24px 0 0', md: '30px 0 30px 30px' }} gap={'25px'}>
               <Typography sx={{ fontSize: '24px', fontWeight: 500 }}>Categories</Typography>
               <StackStyled>
                 <TextStyled>Crafts</TextStyled>
@@ -54,10 +57,11 @@ export const BlogPage = () => {
                 <TextStyled>6</TextStyled>
               </StackStyled>
             </Stack>
-            <Stack padding={'30px 0 30px 30px'} gap={'30px'}>
+            <Stack padding={{ xs: '24px 0 0', md: '30px 0 30px 30px' }} gap={'30px'}>
               <Typography sx={{ fontSize: '24px', fontWeight: 500 }}>Recent Posts</Typography>
               {blogs.map((blog) => (
                 <Stack
+                  key={blog.id}
                   sx={{
                     flexDirection: 'row',
                     alignItems: 'center',
@@ -102,6 +106,7 @@ const TextStyled = styled(Typography)(() => ({
 const ImgStyled = styled('img')(() => ({
   width: '80px',
   height: '80px',
-  borderRadius: '10px'
-  // objectFit: 'cover'
+  borderRadius: '10px',
+  objectFit: 'cover',
+  flexShrink: 0
 }));

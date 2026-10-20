@@ -5,9 +5,8 @@ export const Policy = () => {
   return (
     <Stack
       flex={1}
-      height={'70px'}
       bgcolor={'rgba(250, 243, 234, 1)'}
-      p={'60px 40px'}
+      p={{ xs: '40px 16px', sm: '50px 32px', md: '60px 75px' }}
       display={'flex'}
       flexDirection={'row'}
       alignItems={'center'}
@@ -41,7 +40,7 @@ export const Policy = () => {
         </Stack>
       </StackStyled> */}
       <Grid container spacing={{ md: '5px', sm: '20px', xs: '15px' }}>
-        <Grid item xs={6} sm={6} md={3.3}>
+        <Grid item xs={12} sm={6} md={3.3}>
           <StackStyled>
             <Quality width={'50px'} height={'50px'} />
             <Stack>
@@ -50,7 +49,7 @@ export const Policy = () => {
             </Stack>
           </StackStyled>
         </Grid>
-        <Grid item xs={6} sm={6} md={3.3}>
+        <Grid item xs={12} sm={6} md={3.3}>
           <StackStyled>
             <Protect width={'50px'} height={'50px'} />
             <Stack>
@@ -59,7 +58,7 @@ export const Policy = () => {
             </Stack>
           </StackStyled>
         </Grid>
-        <Grid item xs={6} sm={6} md={2.7}>
+        <Grid item xs={12} sm={6} md={2.7}>
           <StackStyled>
             <Ship width={'50px'} height={'50px'} />
             <Stack>
@@ -68,7 +67,7 @@ export const Policy = () => {
             </Stack>
           </StackStyled>
         </Grid>
-        <Grid item xs={6} sm={6} md={2.7}>
+        <Grid item xs={12} sm={6} md={2.7}>
           <StackStyled>
             <Support width={'50px'} height={'50px'} />
             <Stack>
@@ -97,7 +96,7 @@ const TitleStyled = styled(Typography)(() => ({
 }));
 
 const DesStyled = styled(Typography)(() => ({
-  fontSize: 'clamp(15px 2vw, 18px)',
+  fontSize: 'clamp(14px, 2vw, 18px)',
   fontWeight: 500,
   color: 'rgba(137, 137, 137, 1)',
   lineHeight: '150%',

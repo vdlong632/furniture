@@ -15,10 +15,10 @@ export const Billing = () => {
     formState: { errors }
   } = useFormContext<TypeBillingForm>();
   return (
-    <Stack zIndex={1} p={'30px'} width={'100%'}>
+    <Stack zIndex={1} p={{ xs: '16px 0', md: '30px' }} width={'100%'}>
       <Typography
         sx={{
-          fontSize: '36px',
+          fontSize: { xs: '28px', md: '36px' },
           fontWeight: 600,
           lineHeight: '100%',
           letterSpacing: '0%',
@@ -27,7 +27,7 @@ export const Billing = () => {
         Billing Detail
       </Typography>
       <Grid container spacing={2.5}>
-        <Grid item xs={5}>
+        <Grid item xs={12} sm={6}>
           <InputText
             title="First Name"
             inputError={errors.firstName?.message}
@@ -36,7 +36,7 @@ export const Billing = () => {
             }}
           />
         </Grid>
-        <Grid item xs={5}>
+        <Grid item xs={12} sm={6}>
           <InputText
             title="Last Name"
             inputError={errors.lastName?.message}
@@ -45,7 +45,7 @@ export const Billing = () => {
             }}
           />
         </Grid>
-        <Grid item xs={10}>
+        <Grid item xs={12}>
           <InputText
             title="Company Name (Optional)"
             inputError={errors.companyName?.message}
@@ -54,7 +54,7 @@ export const Billing = () => {
             }}
           />
         </Grid>
-        <Grid item xs={10}>
+        <Grid item xs={12}>
           <Controller
             control={control}
             name="country"
@@ -70,7 +70,7 @@ export const Billing = () => {
             )}
           />
         </Grid>
-        <Grid item xs={10}>
+        <Grid item xs={12}>
           <InputText
             title="Street adress"
             inputError={errors.street?.message}
@@ -79,7 +79,7 @@ export const Billing = () => {
             }}
           />
         </Grid>
-        <Grid item xs={10}>
+        <Grid item xs={12}>
           <InputText
             title="Town / City"
             inputError={errors.town?.message}
@@ -88,7 +88,7 @@ export const Billing = () => {
             }}
           />
         </Grid>
-        <Grid item xs={10}>
+        <Grid item xs={12}>
           <Controller
             control={control}
             name="province"
@@ -103,7 +103,7 @@ export const Billing = () => {
             )}
           />
         </Grid>
-        <Grid item xs={10}>
+        <Grid item xs={12}>
           <InputText
             title="ZIP code"
             inputError={errors.zipCode?.message}
@@ -111,8 +111,8 @@ export const Billing = () => {
               ...register('zipCode')
             }}
           />
-        </Grid>{' '}
-        <Grid item xs={10}>
+        </Grid>
+        <Grid item xs={12}>
           <InputText
             title="Phone"
             inputError={errors.phone?.message}
@@ -120,8 +120,8 @@ export const Billing = () => {
               ...register('phone')
             }}
           />
-        </Grid>{' '}
-        <Grid item xs={10}>
+        </Grid>
+        <Grid item xs={12}>
           <InputText
             title="Email adress"
             inputError={errors.email?.message}
@@ -129,8 +129,8 @@ export const Billing = () => {
               ...register('email')
             }}
           />
-        </Grid>{' '}
-        <Grid item xs={10} sx={{ marginTop: '25px' }}>
+        </Grid>
+        <Grid item xs={12} sx={{ marginTop: '25px' }}>
           <InputText
             title=""
             placeholder="Additional information"

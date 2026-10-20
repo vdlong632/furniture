@@ -22,7 +22,7 @@ export const Order = ({ handleSubmit }: Props) => {
   const { cartItem } = useCart();
   const totalPrice = useTotalProductCart();
   return (
-    <Stack flex={1} m={'30px'} width={'73%'}>
+    <Stack flex={1} m={{ xs: '0 0 24px', md: '30px' }} width={{ xs: '100%', md: '73%' }}>
       <Stack
         gap={'15px'}
         mb={'20px'}
@@ -33,7 +33,7 @@ export const Order = ({ handleSubmit }: Props) => {
           <TitleStyled>Subtotal</TitleStyled>
         </StackStyled>
         {cartItem.map((item) => (
-          <StackStyled>
+          <StackStyled key={item.id}>
             <Stack flexDirection={'row'} gap={'10px'}>
               <ProductStyled>{item.name}</ProductStyled>
               <Typography>x</Typography>
@@ -64,14 +64,14 @@ export const Order = ({ handleSubmit }: Props) => {
           )}
         />
       </Stack>
-      <Stack m={'20px'}>
+      <Stack m={{ xs: '20px 0', md: '20px' }}>
         <ButtonCustom
           onClick={handleSubmit}
           label="Place Order"
           sx={{
             bgcolor: 'rgba(255, 255, 255, 1)',
             border: '1px solid rgba(0, 0, 0, 1)',
-            width: '50%',
+            width: { xs: '100%', sm: '50%' },
             margin: '0 auto',
             '&:hover': { backgroundColor: 'transparent' }
           }}
@@ -96,7 +96,7 @@ const TitleStyled = styled(Typography)(() => ({
 }));
 
 const ProductStyled = styled(Typography)(() => ({
-  fontSize: '16',
+  fontSize: '16px',
   fontWeight: 400,
   color: 'rgba(159, 159, 159, 1)'
 }));

@@ -13,26 +13,44 @@ export const ShopPage = () => {
     <Stack flex={1}>
       <PageHeader title={'Shop'} route={[{ label: 'Shop', path: '/shop' }]} />
       <FilterBar>
-        <Stack flexDirection={'row'} alignItems={'center'} gap={'25px'}>
+        <Stack flexDirection={'row'} alignItems={'center'} gap={{ xs: '16px', md: '25px' }}>
           <Stack flexDirection={'row'} alignItems={'center'} gap={'15px'}>
             <FilterIcon />
             <Typography
-              sx={{ fontSize: '20px', fontWeight: 400, lineHeight: '100%', letterSpacing: '0%' }}>
+              sx={{
+                fontSize: { xs: '16px', md: '20px' },
+                fontWeight: 400,
+                lineHeight: '100%',
+                letterSpacing: '0%'
+              }}>
               Filter
             </Typography>
           </Stack>
           <GridIcon />
           <ViewList />
-          <DividerStyled />
-          <Typography>Showing 1–16 of 32 results</Typography>
+          <DividerStyled sx={{ display: { xs: 'none', sm: 'block' } }} />
+          <Typography sx={{ display: { xs: 'none', sm: 'block' } }}>
+            Showing 1–16 of 32 results
+          </Typography>
         </Stack>
-        <Stack flexDirection={'row'} alignItems={'center'} gap={'20px'}>
-          <Typography sx={{ fontSize: '20px', fontWeight: 400 }}>Show</Typography> <StyledInput />
-          <Typography sx={{ fontSize: '20px', fontWeight: 400 }}>Short by</Typography>{' '}
+        <Stack flexDirection={'row'} alignItems={'center'} gap={{ xs: '10px', md: '20px' }}>
+          <Typography
+            sx={{
+              fontSize: { xs: '16px', md: '20px' },
+              fontWeight: 400,
+              display: { xs: 'none', sm: 'block' }
+            }}>
+            Show
+          </Typography>
+          <StyledInput sx={{ display: { xs: 'none', sm: 'block' } }} />
+          <Typography sx={{ fontSize: { xs: '16px', md: '20px' }, fontWeight: 400 }}>
+            Short by
+          </Typography>
           <Select
             sx={{
-              width: '130px',
-              fontSize: '20px',
+              width: { xs: '120px', md: '130px' },
+              height: { xs: '40px', md: 'auto' },
+              fontSize: { xs: '16px', md: '20px' },
               color: 'rgba(159, 159, 159, 1)',
               borderRadius: 0,
               border: `1px solid rgba(255, 255, 255, 1)`,
@@ -58,15 +76,24 @@ export const ShopPage = () => {
   );
 };
 
-const FilterBar = styled(Stack)(() => ({
+const FilterBar = styled(Stack)(({ theme }) => ({
   width: '100%',
-  height: '100px',
+  minHeight: '100px',
   backgroundColor: 'rgba(249, 241, 231, 1)',
   padding: '25px 75px',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  flexDirection: 'row'
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  gap: '16px',
+  [theme.breakpoints.down('md')]: {
+    padding: '20px 32px'
+  },
+  [theme.breakpoints.down('sm')]: {
+    minHeight: 0,
+    padding: '16px'
+  }
 }));
 
 const DividerStyled = styled(Stack)(() => ({

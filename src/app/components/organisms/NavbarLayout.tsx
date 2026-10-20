@@ -17,11 +17,11 @@ export const NavbarLayout = ({ children }: Props) => {
   return (
     <Stack>
       <WrapperNavbar>
-        <NavbarContent sx={{ md: 'position: fixed' }}>
+        <NavbarContent>
           <Logo />
           <NavbarMenu />
           <NavbarAction />
-          <Stack display={{ sm: 'flex', md: 'none' }}>
+          <Stack display={{ xs: 'flex', md: 'none' }}>
             {!open ? (
               <MenuButton
                 height={'29px'}
@@ -58,26 +58,40 @@ export const NavbarLayout = ({ children }: Props) => {
   );
 };
 
-const WrapperNavbar = styled(Stack)(() => ({
+const WrapperNavbar = styled(Stack)(({ theme }) => ({
   width: '100%',
   height: '100px',
   backgroundColor: 'rgba(255, 255, 255, 1)',
-  position: 'relative'
+  position: 'relative',
+  [theme.breakpoints.down('sm')]: {
+    height: '70px'
+  }
 }));
 
-const NavbarContent = styled(Stack)(() => ({
+const NavbarContent = styled(Stack)(({ theme }) => ({
   margin: '29px 80px 29px 54px',
   height: '41px',
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
+  gap: '16px',
+  [theme.breakpoints.down('md')]: {
+    margin: '29px 32px'
+  },
+  [theme.breakpoints.down('sm')]: {
+    margin: '15px 16px',
+    gap: '12px'
+  }
 }));
 
-const MenuToggle = styled(Stack)(() => ({
+const MenuToggle = styled(Stack)(({ theme }) => ({
   display: 'none',
   position: 'absolute',
   top: '100px',
+  [theme.breakpoints.down('sm')]: {
+    top: '70px'
+  },
   left: 0,
   right: 0,
   backgroundColor: '#F7F3EA',

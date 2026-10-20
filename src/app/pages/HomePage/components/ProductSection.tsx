@@ -37,10 +37,10 @@ export const ProductSection = ({
   };
 
   return (
-    <Stack flex={1} m={'50px 75px'}>
-      <Grid container spacing={'20px'}>
+    <Stack flex={1} m={{ xs: '24px 16px 40px', sm: '40px 32px', md: '50px 75px' }}>
+      <Grid container spacing={{ xs: '12px', md: '20px' }}>
         {filterProduct.slice(0, limit).map((product) => (
-          <Grid item xs={12} md={3} sm={6} key={product.id}>
+          <Grid item xs={6} md={3} sm={6} key={product.id}>
             <ProductStyled
               sx={{
                 position: 'relative',
@@ -54,7 +54,7 @@ export const ProductSection = ({
                   navigate(`/products/slug/${product.slug}`);
                 }
               }}>
-              <Box height={'45vh'}>
+              <Box sx={{ aspectRatio: '285 / 301', overflow: 'hidden' }}>
                 <ImgStyled
                   src={Array.isArray(product.images) ? product.images[0] : product.images}
                   alt={product?.name || 'Product'}
@@ -67,7 +67,8 @@ export const ProductSection = ({
                     bgcolor: 'rgba(255, 255, 255, 1)',
                     width: 'auto-fit',
                     borderRadius: 0,
-                    padding: '10px 45px',
+                    padding: { xs: '8px 16px', md: '10px 45px' },
+                    whiteSpace: 'nowrap',
                     '&:hover': {
                       bgcolor: 'rgba(255, 255, 255, 1)'
                     }
@@ -78,7 +79,10 @@ export const ProductSection = ({
                   }}>
                   Add to cart
                 </Button>
-                <StackStyled gap={'20px'}>
+                <StackStyled
+                  gap={{ xs: '10px', md: '20px' }}
+                  flexWrap={'wrap'}
+                  justifyContent={'center'}>
                   <StackStyled
                     gap={'5px'}
                     onClick={(e: React.MouseEvent) => {
@@ -114,10 +118,10 @@ export const ProductSection = ({
               ) : product.isNew ? (
                 <BadgeStyled bgcolor={'rgba(46, 193, 172, 1)'}>New</BadgeStyled>
               ) : null}
-              <Stack m={'20px 15px 40px 15px'} gap={'10px'}>
+              <Stack m={{ xs: '12px 10px 20px', md: '20px 15px 40px 15px' }} gap={'10px'}>
                 <Typography
                   sx={{
-                    fontSize: '20px',
+                    fontSize: { xs: '16px', md: '20px' },
                     fontWeight: 600,
                     color: 'rgba(58, 58, 58, 1)',
                     width: '100%',
@@ -129,7 +133,7 @@ export const ProductSection = ({
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: '16px',
+                    fontSize: { xs: '13px', md: '16px' },
                     fontWeight: 500,
                     color: 'rgba(137, 137, 137, 1)',
                     textWrap: 'nowrap',
@@ -146,7 +150,7 @@ export const ProductSection = ({
                   gap={'5px'}>
                   <Typography
                     sx={{
-                      fontSize: '18px',
+                      fontSize: { xs: '15px', md: '18px' },
                       fontWeight: 600,
                       lineHeight: '150%',
                       color: 'rgba(58, 58, 58, 1)'
@@ -156,7 +160,7 @@ export const ProductSection = ({
                   {product.oldPrice && (
                     <Typography
                       sx={{
-                        fontSize: '14px',
+                        fontSize: { xs: '12px', md: '14px' },
                         fontWeight: 400,
                         lineHeight: '150%',
                         color: 'rgba(176, 176, 176, 1)',
@@ -187,16 +191,17 @@ const ProductStyled = styled(Stack)(() => ({
   backgroundColor: 'rgba(244, 245, 247, 1)',
   position: 'relative',
   cursor: 'pointer',
-  boxSizing: 'content-box'
+  height: '100%'
 }));
 
 const ImgStyled = styled('img')(() => ({
   width: '100%',
   height: '100%',
-  objectFit: 'cover'
+  objectFit: 'cover',
+  display: 'block'
 }));
 
-const BadgeStyled = styled(Box)(() => ({
+const BadgeStyled = styled(Box)(({ theme }) => ({
   color: 'rgba(255, 255, 255, 1)',
   fontSize: '16px',
   fontWeight: 500,
@@ -209,7 +214,14 @@ const BadgeStyled = styled(Box)(() => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  borderRadius: '50%'
+  borderRadius: '50%',
+  [theme.breakpoints.down('sm')]: {
+    top: '10px',
+    right: '10px',
+    width: '36px',
+    height: '36px',
+    fontSize: '12px'
+  }
 }));
 
 export const TextIconStyled = styled(Typography)(() => ({
