@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 export const NavbarMenu = () => {
   return (
-    <MenuList sx={{ display: { sm: 'none', md: 'flex' } }} direction="row" alignItems="center">
+    <MenuList sx={{ display: { xs: 'none', md: 'flex' } }} direction="row" alignItems="center">
       {ROUTE_MENU.map((item, index) => {
         return (
           <NavLink key={index} to={item.link} style={{ textDecoration: 'none' }}>

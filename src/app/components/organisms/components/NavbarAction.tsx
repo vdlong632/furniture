@@ -23,16 +23,16 @@ export const NavbarAction = () => {
   return (
     <ActionStyed>
       <IconStyled>
-        <img src="profile.png" alt="" />
+        <img src="/profile.png" alt="" />
       </IconStyled>
       <IconStyled>
-        <img src="search.png" alt="" />
+        <img src="/search.png" alt="" />
       </IconStyled>
       <IconStyled onClick={handleCloseWish}>
-        <img src="heart.png" alt="" />
+        <img src="/heart.png" alt="" />
       </IconStyled>
       <IconStyled onClick={handleClose}>
-        <img src="cart.png" alt="" />
+        <img src="/cart.png" alt="" />
       </IconStyled>
       {open && (
         <CartOverlay onClick={handleClose}>
@@ -200,21 +200,30 @@ export const NavbarAction = () => {
 const ActionStyed = styled(Stack)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'row',
-  gap: 'clamp(20px, 4vw, 40px)',
+  alignItems: 'center',
+  gap: 'clamp(20px, 3vw, 40px)',
   [theme.breakpoints.down('md')]: {
-    gap: '55px'
+    marginLeft: 'auto'
   },
   [theme.breakpoints.down('sm')]: {
-    gap: '35px'
+    gap: '14px'
   }
 }));
 
-const IconStyled = styled(Box)(() => ({
+const IconStyled = styled(Box)(({ theme }) => ({
   width: '28px',
   height: '28px',
   display: 'grid',
   placeItems: 'center',
-  cursor: 'pointer'
+  cursor: 'pointer',
+  '& img': {
+    maxWidth: '100%',
+    maxHeight: '100%'
+  },
+  [theme.breakpoints.down('sm')]: {
+    width: '22px',
+    height: '22px'
+  }
 }));
 
 const CartOverlay = styled(Box)(() => ({
@@ -233,7 +242,10 @@ const CartOverlay = styled(Box)(() => ({
 
 const CartModal = styled(Box)(() => ({
   width: '360px',
+  maxWidth: '100vw',
   height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
   position: 'fixed',
   backgroundColor: '#fff',
   padding: '25px'

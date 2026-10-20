@@ -1,0 +1,1149 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Syltherine",
+      "slug": "syltherine",
+      "category": "living",
+      "price": 2500000,
+      "oldPrice": 3500000,
+      "discount": 30,
+      "rating": 4.5,
+      "reviewsCount": 5,
+      "isNew": false,
+      "isFeatured": true,
+      "stock": 10,
+      "material": "Stylish cafe chair",
+      "dimensions": "80 x 75 x 85 cm",
+      "weight": "8 kg",
+      "images": [
+        "/living.png",
+        "/dining.png",
+        "/bedroom.png",
+        "/bedroom2.png"
+      ],
+      "colors": [
+        {
+          "name": "Purple",
+          "code": "#816DFA",
+          "stock": 5
+        },
+        {
+          "name": "Black",
+          "code": "#000000",
+          "stock": 8
+        },
+        {
+          "name": "Gold",
+          "code": "#B88E2F",
+          "stock": 3
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        }
+      ],
+      "description": "Syltherine is a stylish cafe chair crafted from oak wood, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS001",
+      "tags": [
+        "Living",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        2,
+        3,
+        8,
+        9
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Leviosa",
+      "slug": "leviosa",
+      "category": "living",
+      "price": 2500000,
+      "oldPrice": null,
+      "discount": 0,
+      "rating": 4,
+      "reviewsCount": 12,
+      "isNew": false,
+      "isFeatured": true,
+      "stock": 13,
+      "material": "Stylish cafe chair",
+      "dimensions": "200 x 90 x 80 cm",
+      "weight": "45 kg",
+      "images": [
+        "/dining.png",
+        "/bedroom.png",
+        "/bedroom2.png",
+        "/living.png"
+      ],
+      "colors": [
+        {
+          "name": "Beige",
+          "code": "#E8D9C4",
+          "stock": 6
+        },
+        {
+          "name": "Gray",
+          "code": "#9F9F9F",
+          "stock": 4
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        },
+        {
+          "name": "Extra Small",
+          "code": "XS",
+          "priceAdjustment": -300000
+        }
+      ],
+      "description": "Leviosa is a stylish cafe chair crafted from linen fabric, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS002",
+      "tags": [
+        "Living",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        1,
+        3,
+        8,
+        9
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Lolito",
+      "slug": "lolito",
+      "category": "living",
+      "price": 7000000,
+      "oldPrice": 14000000,
+      "discount": 50,
+      "rating": 5,
+      "reviewsCount": 19,
+      "isNew": false,
+      "isFeatured": true,
+      "stock": 16,
+      "material": "Luxury big sofa",
+      "dimensions": "120 x 60 x 75 cm",
+      "weight": "22 kg",
+      "images": [
+        "/bedroom.png",
+        "/bedroom2.png",
+        "/living.png",
+        "/dining.png"
+      ],
+      "colors": [
+        {
+          "name": "Walnut",
+          "code": "#6B4A2E",
+          "stock": 7
+        },
+        {
+          "name": "White",
+          "code": "#F4F5F7",
+          "stock": 2
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        }
+      ],
+      "description": "Lolito is a luxury big sofa crafted from teak wood, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS003",
+      "tags": [
+        "Living",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        1,
+        2,
+        8,
+        9
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Respira",
+      "slug": "respira",
+      "category": "outdoor",
+      "price": 500000,
+      "oldPrice": null,
+      "discount": 0,
+      "rating": 4.7,
+      "reviewsCount": 26,
+      "isNew": true,
+      "isFeatured": true,
+      "stock": 19,
+      "material": "Outdoor bar table and stool",
+      "dimensions": "80 x 75 x 85 cm",
+      "weight": "8 kg",
+      "images": [
+        "/bedroom2.png",
+        "/living.png",
+        "/dining.png",
+        "/bedroom.png"
+      ],
+      "colors": [
+        {
+          "name": "Purple",
+          "code": "#816DFA",
+          "stock": 5
+        },
+        {
+          "name": "Black",
+          "code": "#000000",
+          "stock": 8
+        },
+        {
+          "name": "Gold",
+          "code": "#B88E2F",
+          "stock": 3
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        },
+        {
+          "name": "Extra Small",
+          "code": "XS",
+          "priceAdjustment": -300000
+        }
+      ],
+      "description": "Respira is a outdoor bar table and stool crafted from rattan, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS004",
+      "tags": [
+        "Outdoor",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        14
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Grifo",
+      "slug": "grifo",
+      "category": "bedroom",
+      "price": 1500000,
+      "oldPrice": null,
+      "discount": 0,
+      "rating": 4.5,
+      "reviewsCount": 33,
+      "isNew": false,
+      "isFeatured": false,
+      "stock": 22,
+      "material": "Night lamp",
+      "dimensions": "200 x 90 x 80 cm",
+      "weight": "45 kg",
+      "images": [
+        "/living.png",
+        "/dining.png",
+        "/bedroom.png",
+        "/bedroom2.png"
+      ],
+      "colors": [
+        {
+          "name": "Beige",
+          "code": "#E8D9C4",
+          "stock": 6
+        },
+        {
+          "name": "Gray",
+          "code": "#9F9F9F",
+          "stock": 4
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        }
+      ],
+      "description": "Grifo is a night lamp crafted from ceramic, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS005",
+      "tags": [
+        "Bedroom",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        7,
+        12,
+        16
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Muggo",
+      "slug": "muggo",
+      "category": "kitchen",
+      "price": 150000,
+      "oldPrice": null,
+      "discount": 0,
+      "rating": 4,
+      "reviewsCount": 40,
+      "isNew": true,
+      "isFeatured": false,
+      "stock": 25,
+      "material": "Small mug",
+      "dimensions": "120 x 60 x 75 cm",
+      "weight": "22 kg",
+      "images": [
+        "/dining.png",
+        "/bedroom.png",
+        "/bedroom2.png",
+        "/living.png"
+      ],
+      "colors": [
+        {
+          "name": "Walnut",
+          "code": "#6B4A2E",
+          "stock": 7
+        },
+        {
+          "name": "White",
+          "code": "#F4F5F7",
+          "stock": 2
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        },
+        {
+          "name": "Extra Small",
+          "code": "XS",
+          "priceAdjustment": -300000
+        }
+      ],
+      "description": "Muggo is a small mug crafted from velvet, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS006",
+      "tags": [
+        "Kitchen",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        13
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Pingky",
+      "slug": "pingky",
+      "category": "bedroom",
+      "price": 7000000,
+      "oldPrice": 14000000,
+      "discount": 50,
+      "rating": 5,
+      "reviewsCount": 7,
+      "isNew": false,
+      "isFeatured": false,
+      "stock": 28,
+      "material": "Cute bed set",
+      "dimensions": "80 x 75 x 85 cm",
+      "weight": "8 kg",
+      "images": [
+        "/bedroom.png",
+        "/bedroom2.png",
+        "/living.png",
+        "/dining.png"
+      ],
+      "colors": [
+        {
+          "name": "Purple",
+          "code": "#816DFA",
+          "stock": 5
+        },
+        {
+          "name": "Black",
+          "code": "#000000",
+          "stock": 8
+        },
+        {
+          "name": "Gold",
+          "code": "#B88E2F",
+          "stock": 3
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        }
+      ],
+      "description": "Pingky is a cute bed set crafted from oak wood, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS007",
+      "tags": [
+        "Bedroom",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        5,
+        12,
+        16
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Potty",
+      "slug": "potty",
+      "category": "living",
+      "price": 500000,
+      "oldPrice": null,
+      "discount": 0,
+      "rating": 4.7,
+      "reviewsCount": 14,
+      "isNew": true,
+      "isFeatured": false,
+      "stock": 31,
+      "material": "Minimalist flower pot",
+      "dimensions": "200 x 90 x 80 cm",
+      "weight": "45 kg",
+      "images": [
+        "/bedroom2.png",
+        "/living.png",
+        "/dining.png",
+        "/bedroom.png"
+      ],
+      "colors": [
+        {
+          "name": "Beige",
+          "code": "#E8D9C4",
+          "stock": 6
+        },
+        {
+          "name": "Gray",
+          "code": "#9F9F9F",
+          "stock": 4
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        },
+        {
+          "name": "Extra Small",
+          "code": "XS",
+          "priceAdjustment": -300000
+        }
+      ],
+      "description": "Potty is a minimalist flower pot crafted from linen fabric, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS008",
+      "tags": [
+        "Living",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        1,
+        2,
+        3,
+        9
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Asgaard",
+      "slug": "asgaard",
+      "category": "living",
+      "price": 9500000,
+      "oldPrice": 12500000,
+      "discount": 24,
+      "rating": 4.5,
+      "reviewsCount": 21,
+      "isNew": false,
+      "isFeatured": false,
+      "stock": 34,
+      "material": "Three-seat linen sofa",
+      "dimensions": "120 x 60 x 75 cm",
+      "weight": "22 kg",
+      "images": [
+        "/living.png",
+        "/dining.png",
+        "/bedroom.png",
+        "/bedroom2.png"
+      ],
+      "colors": [
+        {
+          "name": "Walnut",
+          "code": "#6B4A2E",
+          "stock": 7
+        },
+        {
+          "name": "White",
+          "code": "#F4F5F7",
+          "stock": 2
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        }
+      ],
+      "description": "Asgaard is a three-seat linen sofa crafted from teak wood, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS009",
+      "tags": [
+        "Living",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        1,
+        2,
+        3,
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Maya",
+      "slug": "maya",
+      "category": "dining",
+      "price": 6200000,
+      "oldPrice": null,
+      "discount": 0,
+      "rating": 4,
+      "reviewsCount": 28,
+      "isNew": true,
+      "isFeatured": false,
+      "stock": 12,
+      "material": "Solid oak dining table",
+      "dimensions": "80 x 75 x 85 cm",
+      "weight": "8 kg",
+      "images": [
+        "/dining.png",
+        "/bedroom.png",
+        "/bedroom2.png",
+        "/living.png"
+      ],
+      "colors": [
+        {
+          "name": "Purple",
+          "code": "#816DFA",
+          "stock": 5
+        },
+        {
+          "name": "Black",
+          "code": "#000000",
+          "stock": 8
+        },
+        {
+          "name": "Gold",
+          "code": "#B88E2F",
+          "stock": 3
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        },
+        {
+          "name": "Extra Small",
+          "code": "XS",
+          "priceAdjustment": -300000
+        }
+      ],
+      "description": "Maya is a solid oak dining table crafted from rattan, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS010",
+      "tags": [
+        "Dining",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        11,
+        15
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Bella",
+      "slug": "bella",
+      "category": "dining",
+      "price": 1200000,
+      "oldPrice": 1500000,
+      "discount": 20,
+      "rating": 5,
+      "reviewsCount": 35,
+      "isNew": false,
+      "isFeatured": false,
+      "stock": 15,
+      "material": "Upholstered dining chair",
+      "dimensions": "200 x 90 x 80 cm",
+      "weight": "45 kg",
+      "images": [
+        "/bedroom.png",
+        "/bedroom2.png",
+        "/living.png",
+        "/dining.png"
+      ],
+      "colors": [
+        {
+          "name": "Beige",
+          "code": "#E8D9C4",
+          "stock": 6
+        },
+        {
+          "name": "Gray",
+          "code": "#9F9F9F",
+          "stock": 4
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        }
+      ],
+      "description": "Bella is a upholstered dining chair crafted from ceramic, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS011",
+      "tags": [
+        "Dining",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        10,
+        15
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Nordic",
+      "slug": "nordic",
+      "category": "bedroom",
+      "price": 1800000,
+      "oldPrice": null,
+      "discount": 0,
+      "rating": 4.7,
+      "reviewsCount": 42,
+      "isNew": false,
+      "isFeatured": false,
+      "stock": 18,
+      "material": "Two-drawer nightstand",
+      "dimensions": "120 x 60 x 75 cm",
+      "weight": "22 kg",
+      "images": [
+        "/bedroom2.png",
+        "/living.png",
+        "/dining.png",
+        "/bedroom.png"
+      ],
+      "colors": [
+        {
+          "name": "Walnut",
+          "code": "#6B4A2E",
+          "stock": 7
+        },
+        {
+          "name": "White",
+          "code": "#F4F5F7",
+          "stock": 2
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        },
+        {
+          "name": "Extra Small",
+          "code": "XS",
+          "priceAdjustment": -300000
+        }
+      ],
+      "description": "Nordic is a two-drawer nightstand crafted from velvet, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS012",
+      "tags": [
+        "Bedroom",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        5,
+        7,
+        16
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Kaila",
+      "slug": "kaila",
+      "category": "kitchen",
+      "price": 950000,
+      "oldPrice": 1250000,
+      "discount": 24,
+      "rating": 4.5,
+      "reviewsCount": 9,
+      "isNew": false,
+      "isFeatured": false,
+      "stock": 21,
+      "material": "Rattan bar stool",
+      "dimensions": "80 x 75 x 85 cm",
+      "weight": "8 kg",
+      "images": [
+        "/living.png",
+        "/dining.png",
+        "/bedroom.png",
+        "/bedroom2.png"
+      ],
+      "colors": [
+        {
+          "name": "Purple",
+          "code": "#816DFA",
+          "stock": 5
+        },
+        {
+          "name": "Black",
+          "code": "#000000",
+          "stock": 8
+        },
+        {
+          "name": "Gold",
+          "code": "#B88E2F",
+          "stock": 3
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        }
+      ],
+      "description": "Kaila is a rattan bar stool crafted from oak wood, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS013",
+      "tags": [
+        "Kitchen",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        6
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Oslo",
+      "slug": "oslo",
+      "category": "outdoor",
+      "price": 3400000,
+      "oldPrice": null,
+      "discount": 0,
+      "rating": 4,
+      "reviewsCount": 16,
+      "isNew": true,
+      "isFeatured": false,
+      "stock": 24,
+      "material": "Teak lounge chair",
+      "dimensions": "200 x 90 x 80 cm",
+      "weight": "45 kg",
+      "images": [
+        "/dining.png",
+        "/bedroom.png",
+        "/bedroom2.png",
+        "/living.png"
+      ],
+      "colors": [
+        {
+          "name": "Beige",
+          "code": "#E8D9C4",
+          "stock": 6
+        },
+        {
+          "name": "Gray",
+          "code": "#9F9F9F",
+          "stock": 4
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        },
+        {
+          "name": "Extra Small",
+          "code": "XS",
+          "priceAdjustment": -300000
+        }
+      ],
+      "description": "Oslo is a teak lounge chair crafted from linen fabric, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS014",
+      "tags": [
+        "Outdoor",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        4
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Vienna",
+      "slug": "vienna",
+      "category": "dining",
+      "price": 850000,
+      "oldPrice": null,
+      "discount": 0,
+      "rating": 5,
+      "reviewsCount": 23,
+      "isNew": false,
+      "isFeatured": false,
+      "stock": 27,
+      "material": "Ceramic pendant lamp",
+      "dimensions": "120 x 60 x 75 cm",
+      "weight": "22 kg",
+      "images": [
+        "/bedroom.png",
+        "/bedroom2.png",
+        "/living.png",
+        "/dining.png"
+      ],
+      "colors": [
+        {
+          "name": "Walnut",
+          "code": "#6B4A2E",
+          "stock": 7
+        },
+        {
+          "name": "White",
+          "code": "#F4F5F7",
+          "stock": 2
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        }
+      ],
+      "description": "Vienna is a ceramic pendant lamp crafted from teak wood, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS015",
+      "tags": [
+        "Dining",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        10,
+        11
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Luna",
+      "slug": "luna",
+      "category": "bedroom",
+      "price": 11800000,
+      "oldPrice": 13500000,
+      "discount": 13,
+      "rating": 4.7,
+      "reviewsCount": 30,
+      "isNew": false,
+      "isFeatured": false,
+      "stock": 30,
+      "material": "Queen size wooden bed",
+      "dimensions": "80 x 75 x 85 cm",
+      "weight": "8 kg",
+      "images": [
+        "/bedroom2.png",
+        "/living.png",
+        "/dining.png",
+        "/bedroom.png"
+      ],
+      "colors": [
+        {
+          "name": "Purple",
+          "code": "#816DFA",
+          "stock": 5
+        },
+        {
+          "name": "Black",
+          "code": "#000000",
+          "stock": 8
+        },
+        {
+          "name": "Gold",
+          "code": "#B88E2F",
+          "stock": 3
+        }
+      ],
+      "sizes": [
+        {
+          "name": "Large",
+          "code": "L",
+          "priceAdjustment": 0
+        },
+        {
+          "name": "Extra Large",
+          "code": "XL",
+          "priceAdjustment": 500000
+        },
+        {
+          "name": "Extra Small",
+          "code": "XS",
+          "priceAdjustment": -300000
+        }
+      ],
+      "description": "Luna is a queen size wooden bed crafted from rattan, combining clean lines with everyday comfort. Designed to fit modern homes and built to last for years.",
+      "features": [
+        "Premium materials",
+        "Easy to assemble",
+        "2-year warranty"
+      ],
+      "sku": "SS016",
+      "tags": [
+        "Bedroom",
+        "Furniture",
+        "Home"
+      ],
+      "relatedIds": [
+        5,
+        7,
+        12
+      ]
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "slug": "going-all-in-with-millennial-design",
+      "title": "Going all-in with millennial design",
+      "author": "Admin",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in.",
+      "category": "Wood",
+      "image": "/living.png",
+      "published_at": "14 Oct 2022"
+    },
+    {
+      "id": 2,
+      "slug": "exploring-new-ways-of-decorating",
+      "title": "Exploring new ways of decorating",
+      "author": "Admin",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in.",
+      "category": "Handmade",
+      "image": "/dining.png",
+      "published_at": "03 Aug 2022"
+    },
+    {
+      "id": 3,
+      "slug": "handmade-pieces-that-took-time-to-make",
+      "title": "Handmade pieces that took time to make",
+      "author": "Admin",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in.",
+      "category": "Wood",
+      "image": "/bedroom.png",
+      "published_at": "28 Jun 2022"
+    },
+    {
+      "id": 4,
+      "slug": "modern-home-in-milan",
+      "title": "Modern home in Milan",
+      "author": "Admin",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in.",
+      "category": "Interior",
+      "image": "/bedroom2.png",
+      "published_at": "12 May 2022"
+    },
+    {
+      "id": 5,
+      "slug": "colorful-office-redesign",
+      "title": "Colorful office redesign",
+      "author": "Admin",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in.",
+      "category": "Design",
+      "image": "/living.png",
+      "published_at": "01 Mar 2022"
+    }
+  ]
+}

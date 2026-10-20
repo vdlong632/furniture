@@ -13,7 +13,7 @@ export const HomePage = () => {
       <RoomType />
       <Typography
         sx={{
-          fontSize: '40px',
+          fontSize: { xs: '28px', md: '40px' },
           fontWeight: 700,
           lineHeight: '120%',
           letterSpacing: '0%',

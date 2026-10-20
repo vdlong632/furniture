@@ -28,8 +28,12 @@ export const ProductDetail = ({ product }: Props) => {
     addToCart(product, count);
   };
   return (
-    <Stack flex={1} p={'30px 75px 0 75px'} flexDirection={{ md: 'row', sm: 'column' }} gap={'60px'}>
-      <Stack flexDirection={'row'} gap={'20px'}>
+    <Stack
+      flex={1}
+      p={{ xs: '24px 16px 0', sm: '30px 32px 0', md: '30px 75px 0 75px' }}
+      flexDirection={{ xs: 'column', md: 'row' }}
+      gap={{ xs: '32px', md: '60px' }}>
+      <Stack flexDirection={{ xs: 'column-reverse', md: 'row' }} gap={'20px'} flexShrink={0}>
         <ImgItem>
           {product &&
             Array.isArray(product.images) &&
@@ -44,8 +48,10 @@ export const ProductDetail = ({ product }: Props) => {
               />
             ))}
         </ImgItem>
-        <Stack width={'27vw'} height={'65vh'}>
-          {/* <MainImg src={picture} alt="" /> */}
+        <Stack
+          width={{ xs: '100%', md: '27vw' }}
+          height={{ xs: 'auto', md: '65vh' }}
+          sx={{ aspectRatio: { xs: '1 / 1', md: 'auto' } }}>
           {product?.images ? (
             <MainImg src={picture} alt="" />
           ) : (
@@ -53,21 +59,28 @@ export const ProductDetail = ({ product }: Props) => {
           )}
         </Stack>
       </Stack>
-      <Stack gap={'15px'}>
+      <Stack gap={'15px'} flex={1} minWidth={0}>
         <Typography
-          sx={{ fontSize: 'clamp(25px, 4vw, 42px)', fontWeight: 400, lineHeight: '100%' }}>
+          sx={{ fontSize: 'clamp(25px, 4vw, 42px)', fontWeight: 400, lineHeight: '120%' }}>
           {product?.name}
         </Typography>
-        <Typography sx={{ fontSize: '24px', fontWeight: 500, color: 'rgba(159, 159, 159, 1)' }}>
+        <Typography
+          sx={{
+            fontSize: { xs: '20px', md: '24px' },
+            fontWeight: 500,
+            color: 'rgba(159, 159, 159, 1)'
+          }}>
           Rs. {product?.price.toLocaleString('de-DE')}
         </Typography>
         <Typography>{product?.rating}</Typography>
-        <Typography sx={{ width: '80%' }}>{product?.description}</Typography>
+        <Typography sx={{ width: { xs: '100%', md: '80%' } }}>{product?.description}</Typography>
         <Typography>Size</Typography>
         <Stack flexDirection={'row'} gap={'20px'}>
           {product?.sizes.map((size) => (
             <Box
+              key={size.code}
               sx={{
+                cursor: 'pointer',
                 width: '30px',
                 height: '30px',
                 display: 'flex',
@@ -88,7 +101,9 @@ export const ProductDetail = ({ product }: Props) => {
         <Stack flexDirection={'row'} gap={'20px'}>
           {product?.colors.map((color) => (
             <Box
+              key={color.code}
               sx={{
+                cursor: 'pointer',
                 width: '30px',
                 height: '30px',
                 backgroundColor: color.code,
@@ -102,31 +117,31 @@ export const ProductDetail = ({ product }: Props) => {
         </Stack>
         <Stack
           flexDirection={'row'}
-          gap={'20px'}
-          flexWrap={'nowrap'}
-          height={'50px'}
+          gap={{ xs: '12px', md: '20px' }}
+          flexWrap={'wrap'}
           alignItems={'center'}>
           <Stack
             flexDirection={'row'}
             alignItems={'center'}
-            gap={'30px'}
+            gap={{ xs: '20px', md: '30px' }}
             sx={{
               border: '1px solid rgba(159, 159, 159, 1)',
               padding: ' 10px 15px',
-              // width: '150px',
               borderRadius: '10px',
               boxSizing: 'border-box',
-              height: '100%'
+              height: '50px'
             }}>
-            <Typography onClick={decrease}>-</Typography>
+            <Typography onClick={decrease} sx={{ cursor: 'pointer' }}>
+              -
+            </Typography>
             <Typography width={'30px'} textAlign={'center'}>
               {count}
             </Typography>
-            <Typography onClick={increase}>+</Typography>
+            <Typography onClick={increase} sx={{ cursor: 'pointer' }}>
+              +
+            </Typography>
           </Stack>
-          <ButtonStyled onClick={handleAddToCart} sx={{ md: { fontSize: '20px' } }}>
-            Add To Cart
-          </ButtonStyled>
+          <ButtonStyled onClick={handleAddToCart}>Add To Cart</ButtonStyled>
           <ButtonStyled>+ Compare</ButtonStyled>
         </Stack>
         <Stack
@@ -137,8 +152,8 @@ export const ProductDetail = ({ product }: Props) => {
             fontWeight: 400,
             color: 'rgba(159, 159, 159, 1)',
             borderTop: '1px solid rgba(159, 159, 159, 1)',
-            padding: '40px 0',
-            marginTop: '30px'
+            padding: { xs: '24px 0', md: '40px 0' },
+            marginTop: { xs: '16px', md: '30px' }
           }}>
           <Stack gap={'20px'}>
             <Typography>SKU</Typography>
@@ -168,24 +183,30 @@ export const ProductDetail = ({ product }: Props) => {
   );
 };
 
-const ImgItem = styled(Stack)(() => ({
+const ImgItem = styled(Stack)(({ theme }) => ({
   flexDirection: 'column',
-  gap: '20px'
+  gap: '20px',
+  [theme.breakpoints.down('md')]: {
+    flexDirection: 'row',
+    gap: '12px',
+    overflowX: 'auto'
+  }
 }));
 
 const ImgStyled = styled('img')(() => ({
   width: '76px',
   height: '80px',
+  flexShrink: 0,
+  objectFit: 'cover',
   borderRadius: '10px',
   cursor: 'pointer'
 }));
 
-const MainImg = styled('img')(({ theme }) => ({
+const MainImg = styled('img')(() => ({
   width: '100%',
   height: '100%',
-  [theme.breakpoints.down('md')]: {
-    width: '236px'
-  }
+  objectFit: 'cover',
+  borderRadius: '10px'
 }));
 
 const ButtonStyled = styled(Button)(() => ({

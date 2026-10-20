@@ -8,7 +8,11 @@ export const CartPage = () => {
   return (
     <Stack flex={1}>
       <PageHeader title={'Cart'} route={[{ label: 'Cart', path: '/cart' }]} />
-      <Stack flexDirection={'row'} m={'60px 80px'} gap={'25px'}>
+      <Stack
+        flexDirection={{ xs: 'column', lg: 'row' }}
+        alignItems={{ xs: 'stretch', lg: 'flex-start' }}
+        m={{ xs: '32px 16px', sm: '40px 32px', md: '60px 75px' }}
+        gap={'25px'}>
         <CartTable />
         <CartTotal />
       </Stack>

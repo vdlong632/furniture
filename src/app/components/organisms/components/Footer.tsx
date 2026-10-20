@@ -6,7 +6,9 @@ export const Footer = () => {
   const links = ['Home', 'Shop', 'About', 'Contact', 'Blog'];
   const helps = ['Payment Options', 'Return', 'Privaci Policies'];
   return (
-    <Stack p={'30px 75px 35px 75px'} borderTop={'1px solid rgba(159, 159, 159, 1)'}>
+    <Stack
+      p={{ xs: '30px 16px', sm: '30px 32px', md: '30px 75px 35px 75px' }}
+      borderTop={'1px solid rgba(159, 159, 159, 1)'}>
       <Grid container spacing={{ md: '10px', sm: '30px', xs: '30px' }}>
         <Grid item xs={12} md={4}>
           <Stack>
@@ -18,7 +20,7 @@ export const Footer = () => {
           </Stack>
         </Grid>
         <Grid item xs={12} md={2}>
-          <StackStyled flexDirection={{ sm: 'column' }}>
+          <StackStyled>
             <TextStyled>Links</TextStyled>
             <StackStyled>
               {links.map((item) => (
@@ -34,20 +36,18 @@ export const Footer = () => {
             <TextStyled>Help</TextStyled>
             <StackStyled>
               {helps.map((item) => (
-                <IStyled>
-                  <Link to={lowerCase(item)} key={item}>
-                    {item}
-                  </Link>
+                <IStyled key={item}>
+                  <Link to={lowerCase(item)}>{item}</Link>
                 </IStyled>
               ))}
             </StackStyled>
           </StackStyled>
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={4}>
           <StackStyled sx={{ gap: '25px' }}>
             <TextStyled>Newsletter</TextStyled>
             <Stack flexDirection={'row'} gap={'5px'}>
-              <Input placeholder="Enter Your Email Address" sx={{ width: '75%' }} />
+              <Input placeholder="Enter Your Email Address" sx={{ flex: 1, minWidth: 0 }} />
               <Button
                 sx={{
                   borderBottom: '1px solid rgba(0, 0, 0, 1)',
@@ -101,12 +101,13 @@ const TextStyled = styled(Typography)(() => ({
 }));
 
 const StackStyled = styled(Stack)(({ theme }) => ({
-  //   alignItems: 'center',
   gap: '30px',
   flexDirection: 'column',
   [theme.breakpoints.down('md')]: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: '16px 24px'
   }
 }));
 

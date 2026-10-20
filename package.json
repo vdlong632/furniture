@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite --host",
     "start": "vite",
+    "mock": "node mock/server.cjs",
     "start:prod": "serve -s build -l 3402",
     "build": "tsc && vite build",
     "typecheck": "tsc",

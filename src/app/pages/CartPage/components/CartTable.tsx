@@ -26,8 +26,8 @@ const COLUMNS = [
 export const CartTable = () => {
   const { cartItem, removeFromCart } = useCart();
   return (
-    <Stack flex={1}>
-      <Stack>
+    <Stack flex={2} minWidth={0}>
+      <Stack sx={{ overflowX: 'auto' }}>
         <Table stickyHeader sx={{ minWidth: '750px' }}>
           <TableHead>
             <TableRow sx={{ backgroundColor: 'rgba(249, 241, 231, 1)', border: 'none !important' }}>
@@ -52,7 +52,7 @@ export const CartTable = () => {
           </TableHead>
           <TableBody>
             {cartItem.map((item) => (
-              <TableRowStyled>
+              <TableRowStyled key={item.id}>
                 <TableCellStyled sx={{ paddingLeft: '0px !important' }}>
                   <ImgStyled src={item.images[0]} />
                 </TableCellStyled>
