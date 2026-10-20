@@ -6,13 +6,13 @@ import {
   Table,
   TableBody,
   TableCell,
+  TableCellProps,
   TableHead,
   TableRow,
   Typography
 } from '@mui/material';
 import { DeleteBin } from 'assets';
 import { useCart } from 'contexts/cart';
-import { Align } from 'services/clinic-procedures';
 
 const COLUMNS = [
   { id: 'img', label: '', minWidth: '105px' },
@@ -34,7 +34,7 @@ export const CartTable = () => {
               {COLUMNS.map((column) => (
                 <TableCellHeaderStyled
                   key={column.id}
-                  align={(column.align as Align) || 'center'}
+                  align={(column.align as TableCellProps['align']) || 'center'}
                   sx={{
                     minWidth: column.minWidth,
                     fontSize: '14px'

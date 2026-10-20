@@ -12,8 +12,6 @@ import { FlashProvider } from 'contexts/flash';
 import { Flash } from './app/components/elements/Flash';
 import theme from './styles/theme';
 import { ThemeProvider } from '@mui/material';
-import { AuthProvider } from 'contexts/auth';
-import { ClinicProvider } from 'contexts/clinic';
 import { CartProvider } from 'contexts/cart';
 import { WishProvider } from 'contexts/wish';
 
@@ -29,16 +27,14 @@ root.render(
   <BrowserRouter>
     <ThemeProvider theme={theme}>
       <LoadingProvider>
-        <AuthProvider>
-          <CartProvider>
-            <WishProvider>
-              <FlashProvider>
-                <App />
-                <Flash />
-              </FlashProvider>
-            </WishProvider>
-          </CartProvider>
-        </AuthProvider>
+        <CartProvider>
+          <WishProvider>
+            <FlashProvider>
+              <App />
+              <Flash />
+            </FlashProvider>
+          </WishProvider>
+        </CartProvider>
       </LoadingProvider>
     </ThemeProvider>
   </BrowserRouter>

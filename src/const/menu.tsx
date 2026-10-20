@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { DashboardIcon, ProceduresIcon, ProductIcon, SettingIcon, UserIcon } from 'assets/index';
 
 export type MenuItem = {
   label?: string;
