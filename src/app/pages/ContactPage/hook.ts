@@ -14,7 +14,7 @@ export const useContactForm = () => {
     },
     mode: 'onSubmit'
   });
-  // console.log(methods.formState.errors)
+  console.log(methods.formState.errors);
 
   const onSubmit = async (data: TypeContactForm) => {
     console.log('Submited', data);
