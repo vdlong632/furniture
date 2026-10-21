@@ -21,6 +21,20 @@ type Props = {
 
 export function WishProvider({ children }: Props) {
   const [wishItem, setWishItem] = useState<Product[]>([]);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedWish = localStorage.getItem('wish');
+      if(storedWish) {
+        setWishItem(JSON.parse(storedWish));
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if(typeof window !== 'undefined') {
+      localStorage.setItem('wish', JSON.stringify(wishItem));
+    }
+  }, [wishItem]);
 
   const toggleWish = (product: Product) => {
     setWishItem((prevItem) =>
@@ -29,10 +43,6 @@ export function WishProvider({ children }: Props) {
         : [...prevItem, product]
     );
   };
-
-  useEffect(() => {
-    console.log('wishlist:', wishItem);
-  }, [wishItem]);
 
   const value = { wishItem, toggleWish };
   return <WishContext.Provider value={value}>{children}</WishContext.Provider>;

@@ -27,6 +27,14 @@ type Props = {
 };
 export function CartProvider({ children }: Props) {
   const [cartItem, setCartItem] = useState<CartItem[]>([]);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedCart = localStorage.getItem('cart');
+      if(storedCart) {
+        setCartItem(JSON.parse(storedCart));
+      }
+    }
+  }, []);
 
   const addToCart = (product: Product, quantity = 1) => {
     setCartItem((prevItem) => {
@@ -39,10 +47,6 @@ export function CartProvider({ children }: Props) {
       return [...prevItem, { ...product, quantity }];
     });
   };
-
-  useEffect(() => {
-    console.log('Cart updated:', cartItem);
-  }, [cartItem]);
 
   const removeFromCart = (product: Product) => {
     setCartItem((prevItem) => prevItem.filter((item) => item.id !== product.id));
@@ -61,6 +65,12 @@ export function CartProvider({ children }: Props) {
       return [...prevItem];
     });
   };
+
+  useEffect(() => {
+    if(typeof window !== 'undefined') {
+      localStorage.setItem('cart', JSON.stringify(cartItem));
+    }
+  }, [cartItem]);
 
   const value = {
     cartItem,
